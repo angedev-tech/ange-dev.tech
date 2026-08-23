@@ -183,7 +183,41 @@ const fadeObserver = new IntersectionObserver((entries) => {
 fadeEls.forEach(el => fadeObserver.observe(el));
 
 // ============================================================
-// 9. YOUTHCONNECT MODAL
+// 9. CERTIFICATION MODAL
+// ============================================================
+(function () {
+  const modal = document.getElementById('certificationModal');
+  const trigger = document.querySelector('.certification-card__trigger');
+  const closeBtn = document.querySelector('.certification-modal__close');
+  const backdrop = document.querySelector('[data-close-certification]');
+
+  if (!modal || !trigger) return;
+
+  const openModal = () => {
+    modal.classList.add('certification-modal--open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('certification-modal--open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  trigger.addEventListener('click', openModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('certification-modal--open')) {
+      closeModal();
+    }
+  });
+})();
+
+// ============================================================
+// 10. YOUTHCONNECT MODAL
 // ============================================================
 (function () {
   const overlay = document.getElementById('yc-detail-modal');

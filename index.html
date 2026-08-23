@@ -937,17 +937,27 @@
 
         <div class="services__grid">
           <article class="service-card">
-            <div class="service-card__icon"> <img src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508253/Certifications_freeCodeCamp_r1mgzc.png" alt="Certification"></div>
+            <div class="service-card__image-wrap">
+              <button class="certification-card__trigger" type="button" aria-label="Agrandir la certification">
+                <img src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508253/Certifications_freeCodeCamp_r1mgzc.png" alt="Certification freeCodeCamp">
+              </button>
+            </div>
             <h3 class="service-card__title">Cert. Conc. Web Réactive Héritée V8</h3>
             <p class="service-card__desc">Certification obtenue dans le cadre de mon apprentissage en développement web, avec une approche orientée interface responsive et interfaces utilisateur.</p>
             <div class="project-card__tags" style="margin-top:1rem;"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Responsive</span></div>
-            <div style="margin-top:1rem;">
-              <a href="https://drive.google.com/file/d/1xvK59hJEOHnHcgrGhQe-pzuWAtE3E_QK/view?usp=sharing" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">Voir la certification</a>
-            </div>
+            <p class="certification-card__hint">Cliquez sur l’image pour l’agrandir.</p>
           </article>
         </div>
       </div>
     </section>
+
+    <div class="certification-modal" id="certificationModal" aria-hidden="true">
+      <div class="certification-modal__backdrop" data-close-certification></div>
+      <div class="certification-modal__content" role="dialog" aria-modal="true" aria-label="Agrandissement de la certification">
+        <button class="certification-modal__close" type="button" aria-label="Fermer la certification">×</button>
+        <img src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508253/Certifications_freeCodeCamp_r1mgzc.png" alt="Certification complète">
+      </div>
+    </div>
   </div><!-- /page-certification -->
 
 
