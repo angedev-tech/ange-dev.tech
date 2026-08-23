@@ -60,6 +60,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -68,6 +69,7 @@ body {
   background: var(--color-white);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img,
@@ -1924,33 +1926,72 @@ details[open] .faq__question::after {
     --space-2xl: 4rem;
   }
 
-  /* Stats */
+  .nav {
+    height: 64px;
+  }
+
+  .nav__logo img {
+    height: 36px;
+  }
+
+  .hero {
+    padding-top: 64px;
+  }
+
+  .hero__inner {
+    gap: 2rem;
+  }
+
+  .hero__name {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    line-height: 1.15;
+  }
+
+  .hero__desc {
+    font-size: 0.95rem;
+  }
+
+  .hero__avatar {
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero__code-card {
+    max-width: 100%;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+    max-width: 300px;
+  }
+
   .stats__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-sm);
   }
 
-  /* Services */
   .services__grid {
     grid-template-columns: 1fr;
   }
 
-  /* Portfolio */
   .portfolio__grid {
     grid-template-columns: 1fr;
   }
 
-  /* Goals */
   .goals__grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Skills cards */
   .skills__cards {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Timeline */
   .timeline__track {
     padding-left: 44px;
   }
@@ -1969,7 +2010,6 @@ details[open] .faq__question::after {
   .project-card__overlay {
     position: absolute;
     z-index: 2;
-    /* au-dessus de l'image et du SVG */
     pointer-events: auto;
   }
 
@@ -1980,37 +2020,28 @@ details[open] .faq__question::after {
     cursor: pointer;
   }
 
-  /* Si tu as un pseudo-élément ::before ou ::after sur la card qui bloque */
   .project-card__img::before,
   .project-card__img::after {
     pointer-events: none;
-    /* empêche de bloquer les clics */
   }
 
-  /* Contact form */
   .contact__form-wrap {
     padding: var(--space-md);
   }
 
-  /* Footer */
   .footer__grid {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
   }
 
-  /* Hero buttons */
-  .hero__actions {
-    flex-direction: column;
-    align-items: center;
+  .certification-card__trigger img {
+    height: 220px;
   }
 
-  .hero__actions .btn {
-    width: 100%;
-    justify-content: center;
-    max-width: 300px;
+  .certification-modal__content {
+    max-width: min(92vw, 700px);
   }
 
-  /* Back to top */
   .back-to-top {
     bottom: 1.2rem;
     right: 1.2rem;
@@ -2024,6 +2055,18 @@ details[open] .faq__question::after {
    20. SMALL MOBILE (max-width: 360px)
    ---------------------------------------------------------- */
 @media (max-width: 360px) {
+  .nav__logo img {
+    height: 30px;
+  }
+
+  .container {
+    padding-inline: 0.85rem;
+  }
+
+  .hero__name {
+    font-size: clamp(2rem, 9vw, 2.5rem);
+  }
+
   .goals__grid {
     grid-template-columns: 1fr;
   }
@@ -2034,6 +2077,10 @@ details[open] .faq__question::after {
 
   .stat-card__number {
     font-size: 1.8rem;
+  }
+
+  .certification-card__trigger img {
+    height: 180px;
   }
 }
 
