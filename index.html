@@ -431,7 +431,7 @@
   <!-- ========== HEADER — Bleu épinglé ========== -->
   <header class="header" id="header">
     <nav class="nav container">
-      <a href="#" class="nav__logo" onclick="showPage('accueil'); return false;">
+      <a href="#page-accueil" class="nav__logo" onclick="showPage('accueil'); return false;">
         <img
           src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1781744480/WhatsApp_Image_2026-06-18_at_12.55.00_AM_onfon9.jpg"
           alt="Logo Angelo Koffi" />
@@ -442,14 +442,15 @@
       </button>
 
       <ul class="nav__list" id="navList">
-        <li><a href="#" class="nav__link nav__link--active" onclick="showPage('accueil'); return false;">Accueil</a>
+        <li><a href="#page-accueil" class="nav__link nav__link--active" onclick="showPage('accueil'); return false;">Accueil</a>
         </li>
-        <li><a href="#" class="nav__link" onclick="showPage('apropos'); return false;">À propos</a></li>
-        <li><a href="#" class="nav__link" onclick="showPage('competences'); return false;">Compétences</a></li>
-        <li><a href="#" class="nav__link" onclick="showPage('services'); return false;">Services</a></li>
-        <li><a href="#" class="nav__link" onclick="showPage('portfolio'); return false;">Portfolio</a></li>
-        <li><a href="#" class="nav__link" onclick="showPage('parcours'); return false;">Parcours</a></li>
-        <li><a href="#" class="nav__link nav__link--cta" onclick="showPage('contact'); return false;">Contact</a></li>
+        <li><a href="# page-apropos" class="nav__link" onclick="showPage('apropos'); return false;">À propos</a></li>
+        <li><a href="# page-competences" class="nav__link" onclick="showPage('competences'); return false;">Compétences</a></li>
+        <li><a href="# page-services" class="nav__link" onclick="showPage('services'); return false;">Services</a></li>
+        <li><a href="# page-portfolio" class="nav__link" onclick="showPage('portfolio'); return false;">Portfolio</a></li>
+        <li><a href="# page-certification" class="nav__link" onclick="showPage('certification'); return false;">Certification</a></li>
+        <li><a href="# page-parcours" class="nav__link" onclick="showPage('parcours'); return false;">Parcours</a></li>
+        <li><a href="# page-contact " class="nav__link nav__link--cta" onclick="showPage('contact'); return false;">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -923,6 +924,34 @@
 
 
   <!-- ========================================================
+       PAGE : CERTIFICATION
+  ======================================================== -->
+  <div id="page-certification" class="page">
+    <section class="services section section--gray" id="certification">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Certification</span>
+          <h2 class="section__title">Diplômes et attestations</h2>
+          <p class="section__subtitle">Des réalisations et certifications qui renforcent ma crédibilité dans le développement web.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card">
+            <div class="service-card__icon"><img src="https://img.icons8.com/?size=100&id=Gx8A5bKzv8pZ&format=png&color=000000" alt="Certification"></div>
+            <h3 class="service-card__title">Cert. Conc. Web Réactive Héritée V8</h3>
+            <p class="service-card__desc">Certification obtenue dans le cadre de mon apprentissage en développement web, avec une approche orientée interface responsive et interfaces utilisateur.</p>
+            <div class="project-card__tags" style="margin-top:1rem;"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Responsive</span></div>
+            <div style="margin-top:1rem;">
+              <a href="https://drive.google.com/file/d/1xvK59hJEOHnHcgrGhQe-pzuWAtE3E_QK/view?usp=sharing" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">Voir la certification</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div><!-- /page-certification -->
+
+
+  <!-- ========================================================
        PAGE : PARCOURS
   ======================================================== -->
   <div id="page-parcours" class="page">
@@ -1220,17 +1249,19 @@
       <div class="footer__col">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="#" onclick="showPage('accueil'); return false;">Accueil</a></li>
-          <li><a href="#" onclick="showPage('portfolio'); return false;">Projets</a></li>
-          <li><a href="#" onclick="showPage('contact'); return false;">Contact</a></li>
+          <li><a href="#page-accueil" onclick="showPage('accueil'); return false;">Accueil</a></li>
+          <li><a href="#page-portfolio" onclick="showPage('portfolio'); return false;">Projets</a></li>
+          <li><a href="#page-contact" onclick="showPage('contact'); return false;">Contact</a></li>
+          <li><a href="#page-certification" onclick="showPage('certification'); return false;">Certification</a></li>
+          <li><a href="#page-parcours" onclick="showPage('parcours'); return false;">Parcours</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#" onclick="showPage('services'); return false;">Sites vitrines</a></li>
-          <li><a href="#" onclick="showPage('services'); return false;">Landing pages</a></li>
-          <li><a href="#" onclick="showPage('services'); return false;">Portfolio</a></li>
+          <li><a href="#page-services" onclick="showPage('services'); return false;">Sites vitrines</a></li>
+          <li><a href="#page-services" onclick="showPage('services'); return false;">Landing pages</a></li>
+          <li><a href="#page-services" onclick="showPage('services'); return false;">Portfolio</a></li>
         </ul>
       </div>
       <div class="footer__col">

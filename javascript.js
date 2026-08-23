@@ -6,7 +6,7 @@
 // ============================================================
 // 1. NAVIGATION SPA — affichage par pages
 // ============================================================
-const pages = ['accueil', 'apropos', 'competences', 'services', 'portfolio', 'parcours', 'contact'];
+const pages = ['accueil', 'apropos', 'competences', 'services', 'portfolio', 'certification', 'parcours', 'contact'];
 
 function showPage(pageId) {
   // Cacher toutes les pages
