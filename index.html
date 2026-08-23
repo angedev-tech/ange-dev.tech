@@ -442,15 +442,20 @@
       </button>
 
       <ul class="nav__list" id="navList">
-        <li><a href="#page-accueil" class="nav__link nav__link--active" onclick="showPage('accueil'); return false;">Accueil</a>
+        <li><a href="#page-accueil" class="nav__link nav__link--active"
+            onclick="showPage('accueil'); return false;">Accueil</a>
         </li>
         <li><a href="# page-apropos" class="nav__link" onclick="showPage('apropos'); return false;">À propos</a></li>
-        <li><a href="# page-competences" class="nav__link" onclick="showPage('competences'); return false;">Compétences</a></li>
+        <li><a href="# page-competences" class="nav__link"
+            onclick="showPage('competences'); return false;">Compétences</a></li>
         <li><a href="# page-services" class="nav__link" onclick="showPage('services'); return false;">Services</a></li>
-        <li><a href="# page-portfolio" class="nav__link" onclick="showPage('portfolio'); return false;">Portfolio</a></li>
-        <li><a href="# page-certification" class="nav__link" onclick="showPage('certification'); return false;">Certification</a></li>
+        <li><a href="# page-portfolio" class="nav__link" onclick="showPage('portfolio'); return false;">Portfolio</a>
+        </li>
+        <li><a href="# page-certification" class="nav__link"
+            onclick="showPage('certification'); return false;">Certification</a></li>
         <li><a href="# page-parcours" class="nav__link" onclick="showPage('parcours'); return false;">Parcours</a></li>
-        <li><a href="# page-contact " class="nav__link nav__link--cta" onclick="showPage('contact'); return false;">Contact</a></li>
+        <li><a href="# page-contact " class="nav__link nav__link--cta"
+            onclick="showPage('contact'); return false;">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -583,10 +588,6 @@
             <a href="https://drive.google.com/file/d/1Ezan6NmdMMVzBS7KP3SBWgR3PKpCoj9d/view?usp=sharing"
               class="btn btn--primary" target="_blank" rel="noopener">
               Télécharger mon CV
-            </a>
-            <a href="https://drive.google.com/file/d/1xvK59hJEOHnHcgrGhQe-pzuWAtE3E_QK/view?usp=sharing"
-              class="btn btn--outline" target="_blank" rel="noopener">
-              Cert. Conc. Web Réactive Héritée V8
             </a>
           </div>
         </div>
@@ -932,19 +933,128 @@
         <div class="section__header">
           <span class="section__eyebrow">Certification</span>
           <h2 class="section__title">Diplômes et attestations</h2>
-          <p class="section__subtitle">Des réalisations et certifications qui renforcent ma crédibilité dans le développement web.</p>
+          <p class="section__subtitle">Des réalisations et certifications qui renforcent ma crédibilité dans le
+            développement web.</p>
         </div>
 
         <div class="services__grid">
           <article class="service-card">
             <div class="service-card__image-wrap">
-              <button class="certification-card__trigger" type="button" aria-label="Agrandir la certification">
-                <img src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508253/Certifications_freeCodeCamp_r1mgzc.png" alt="Certification freeCodeCamp">
+              <button class="certification-card__trigger" type="button" aria-label="Agrandir la certification"
+                data-image="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508253/Certifications_freeCodeCamp_r1mgzc.png"
+                data-alt="Certification freeCodeCamp">
+                <img
+                  src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508253/Certifications_freeCodeCamp_r1mgzc.png"
+                  alt="Certification freeCodeCamp">
               </button>
             </div>
             <h3 class="service-card__title">Cert. Conc. Web Réactive Héritée V8</h3>
-            <p class="service-card__desc">Certification obtenue dans le cadre de mon apprentissage en développement web, avec une approche orientée interface responsive et interfaces utilisateur.</p>
-            <div class="project-card__tags" style="margin-top:1rem;"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Responsive</span></div>
+            <p class="service-card__desc">Certification obtenue dans le cadre de mon apprentissage en développement web,
+              avec une approche orientée interface responsive et interfaces utilisateur.</p>
+            <div class="project-card__tags" style="margin-top:1rem;"><span class="tag">HTML5</span><span
+                class="tag">CSS3</span><span class="tag">Responsive</span></div>
+            <p class="certification-card__hint">Cliquez sur l’image pour l’agrandir.</p>
+          </article>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card">
+            <div class="service-card__image-wrap">
+              <button class="certification-card__trigger" type="button" aria-label="Agrandir la certification"
+                data-image="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508262/Attestation_fin_formation_THP_EDEMNAWO_vtnj5x.png"
+                data-alt="Attestation de fin de parcours The Hacking Project">
+                <img
+                  src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508262/Attestation_fin_formation_THP_EDEMNAWO_vtnj5x.png"
+                  alt="Certification The Hacking Project">
+              </button>
+            </div>
+            <h3 class="service-card__title">Attestation de fin de parcours — The Hacking Project</h3>
+            <p class="service-card__desc">Formation : 3 semaines d’introduction à la programmation
+
+              Formation intensive en programmation réalisée avec The Hacking Project, axée sur l’apprentissage pratique
+              du développement informatique. Cette formation m’a permis de renforcer mes bases en programmation,
+              développement frontend, Git & GitHub, algorithmique et travail en équipe, tout en découvrant la
+              méthodologie Agile et l’apprentissage collaboratif par les projets.
+
+              Compétences développées :
+
+              Programmation et algorithmique
+              Git & GitHub
+              Développement frontend
+              Travail en équipe
+              Méthodologie Agile
+              Apprentissage par projet et peer-learning
+
+              Organisme : The Hacking Project
+              Date : Mars 2026</p>
+            <div class="project-card__tags" style="margin-top:1rem;"><span class="tag">HTML5</span><span
+                class="tag">CSS3</span><span class="tag">Responsive</span><span class="tag">Git</span><span class="tag">GitHub</span></div>
+            <p class="certification-card__hint">Cliquez sur l’image pour l’agrandir.</p>
+          </article>
+        </div>
+
+            <div class="services__grid">
+          <article class="service-card">
+            <div class="service-card__image-wrap">
+              <button class="certification-card__trigger" type="button" aria-label="Agrandir la certification"
+                data-image="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508261/Full-Stack_Development_101_certification_czcuhm.png"
+                data-alt="Certification Full-Stack Development 101 Simplilearn">
+                <img
+                  src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508261/Full-Stack_Development_101_certification_czcuhm.png"
+                  alt="Certification Simplilearn">
+              </button>
+            </div>
+            <h3 class="service-card__title">Full-Stack Development 101 — Simplilearn SkillUp</h3>
+            <p class="service-card__desc">Certification : Full-Stack Development 101
+
+Certification attestant de la réussite d’une formation en développement Full Stack proposée par Simplilearn SkillUp. Cette formation m’a permis de développer une meilleure compréhension de l’écosystème du développement web et des différentes étapes nécessaires à la création d’applications web modernes, du frontend au backend.
+
+Compétences développées :
+
+Fondamentaux du développement Full Stack
+Développement frontend
+Concepts backend
+Architecture des applications web
+Technologies et outils du développement web
+
+Organisme : Simplilearn SkillUp
+Date : 9 août 2026
+Code du certificat : 10580237</p>
+            <div class="project-card__tags" style="margin-top:1rem;"><span class="tag">HTML5</span><span
+                class="tag">CSS3</span><span class="tag">Responsive</span><span class="tag">Git</span><span class="tag">GitHub</span></div>
+            <p class="certification-card__hint">Cliquez sur l’image pour l’agrandir.</p>
+          </article>
+        </div>
+
+                <div class="services__grid">
+          <article class="service-card">
+            <div class="service-card__image-wrap">
+              <button class="certification-card__trigger" type="button" aria-label="Agrandir la certification"
+                data-image="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508261/GitHub_Copilot_Fundamentals_Certificate_dp85e9.png"
+                data-alt="Certification GitHub Copilot Fundamentals">
+                <img
+                  src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508261/GitHub_Copilot_Fundamentals_Certificate_dp85e9.png"
+                  alt="Certification GitHub Copilot Fundamentals">
+              </button>
+            </div>
+            <h3 class="service-card__title">GitHub Copilot Fundamentals — Simplilearn SkillUp</h3>
+            <p class="service-card__desc">Certification : GitHub Copilot Fundamentals
+
+Certification obtenue après avoir suivi une formation consacrée aux fondamentaux de GitHub Copilot, l’assistant de programmation basé sur l’intelligence artificielle. Cette formation m’a permis de mieux comprendre comment utiliser l’IA pour accélérer le développement, générer et compléter du code, explorer des solutions techniques et améliorer la productivité du développeur.
+
+Compétences développées :
+
+Utilisation des assistants IA pour le développement
+GitHub Copilot
+Génération et complétion de code
+Productivité des développeurs
+Intégration de l’IA dans le workflow de développement
+
+Organisme : Simplilearn SkillUp
+Date : 15 août 2026
+Code du certificat : 10602276</p>
+            <div class="project-card__tags" style="margin-top:1rem;"><span class="tag">HTML5</span><span
+                class="tag">CSS3</span><span class="tag">Responsive</span><span class="tag">Git</span><span class="tag">GitHub</span></div>
             <p class="certification-card__hint">Cliquez sur l’image pour l’agrandir.</p>
           </article>
         </div>
@@ -953,9 +1063,11 @@
 
     <div class="certification-modal" id="certificationModal" aria-hidden="true">
       <div class="certification-modal__backdrop" data-close-certification></div>
-      <div class="certification-modal__content" role="dialog" aria-modal="true" aria-label="Agrandissement de la certification">
+      <div class="certification-modal__content" role="dialog" aria-modal="true"
+        aria-label="Agrandissement de la certification">
         <button class="certification-modal__close" type="button" aria-label="Fermer la certification">×</button>
-        <img src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508253/Certifications_freeCodeCamp_r1mgzc.png" alt="Certification complète">
+        <img src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1787508253/Certifications_freeCodeCamp_r1mgzc.png"
+          alt="Certification complète">
       </div>
     </div>
   </div><!-- /page-certification -->

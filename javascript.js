@@ -187,13 +187,19 @@ fadeEls.forEach(el => fadeObserver.observe(el));
 // ============================================================
 (function () {
   const modal = document.getElementById('certificationModal');
-  const trigger = document.querySelector('.certification-card__trigger');
+  const modalImg = modal ? modal.querySelector('img') : null;
+  const triggers = document.querySelectorAll('.certification-card__trigger');
   const closeBtn = document.querySelector('.certification-modal__close');
   const backdrop = document.querySelector('[data-close-certification]');
 
-  if (!modal || !trigger) return;
+  if (!modal || !modalImg || triggers.length === 0) return;
 
-  const openModal = () => {
+  const openModal = (button) => {
+    const imageSrc = button.dataset.image || button.querySelector('img')?.src;
+    const imageAlt = button.dataset.alt || button.querySelector('img')?.alt || 'Certification';
+
+    modalImg.src = imageSrc;
+    modalImg.alt = imageAlt;
     modal.classList.add('certification-modal--open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -205,7 +211,10 @@ fadeEls.forEach(el => fadeObserver.observe(el));
     document.body.style.overflow = '';
   };
 
-  trigger.addEventListener('click', openModal);
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => openModal(trigger));
+  });
+
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
   if (backdrop) backdrop.addEventListener('click', closeModal);
 
