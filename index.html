@@ -445,16 +445,16 @@
         <li><a href="#page-accueil" class="nav__link nav__link--active"
             onclick="showPage('accueil'); return false;">Accueil</a>
         </li>
-        <li><a href="# page-apropos" class="nav__link" onclick="showPage('apropos'); return false;">À propos</a></li>
-        <li><a href="# page-competences" class="nav__link"
+        <li><a href="#page-apropos" class="nav__link" onclick="showPage('apropos'); return false;">À propos</a></li>
+        <li><a href="#page-competences" class="nav__link"
             onclick="showPage('competences'); return false;">Compétences</a></li>
-        <li><a href="# page-services" class="nav__link" onclick="showPage('services'); return false;">Services</a></li>
-        <li><a href="# page-portfolio" class="nav__link" onclick="showPage('portfolio'); return false;">Portfolio</a>
+        <li><a href="#page-services" class="nav__link" onclick="showPage('services'); return false;">Services</a></li>
+        <li><a href="#page-portfolio" class="nav__link" onclick="showPage('portfolio'); return false;">Portfolio</a>
         </li>
-        <li><a href="# page-certification" class="nav__link"
+        <li><a href="#page-certification" class="nav__link"
             onclick="showPage('certification'); return false;">Certification</a></li>
-        <li><a href="# page-parcours" class="nav__link" onclick="showPage('parcours'); return false;">Parcours</a></li>
-        <li><a href="# page-contact " class="nav__link nav__link--cta"
+        <li><a href="#page-parcours" class="nav__link" onclick="showPage('parcours'); return false;">Parcours</a></li>
+        <li><a href="#page-contact" class="nav__link nav__link--cta"
             onclick="showPage('contact'); return false;">Contact</a></li>
       </ul>
     </nav>
@@ -470,20 +470,36 @@
       <div class="container hero__inner">
 
         <div class="hero__content">
-          <span class="hero__badge">👋 Disponible pour des projets </span>
+          <span class="hero__badge">Disponible pour des missions freelance &amp; stage</span>
           <h1 class="hero__name">Angélo <span class="hero__name--accent">Koffi EDEMNAWO</span></h1>
           <p class="hero__role">
             <span class="hero__role-text" id="typedRole"></span><span class="hero__cursor">|</span>
           </p>
           <p class="hero__desc">
-            Passionné par le développement web moderne, je crée des interfaces élégantes,
-            responsives et performantes grâce à <strong>HTML</strong> et <strong>CSS</strong>
-            tout en développant mes compétences en <strong>JavaScript</strong>.
+            Développeur web front-end en formation, je conçois des interfaces modernes, claires et performantes
+            pour aider les entreprises à renforcer leur présence digitale et leur image de marque.
           </p>
+
           <div class="hero__actions">
-            <a href="#" class="btn btn--primary" onclick="showPage('portfolio'); return false;">Voir mes projets</a>
-            <a href="#" class="btn btn--outline" onclick="showPage('contact'); return false;">Me contacter</a>
+            <a href="#" class="btn btn--primary" onclick="showPage('portfolio'); return false;">Voir mes réalisations</a>
+            <a href="#" class="btn btn--outline" onclick="showPage('contact'); return false;">Parler de votre projet</a>
           </div>
+
+          <div class="hero__highlights">
+            <div class="hero__mini-stat">
+              <strong>2+</strong>
+              <span>projets</span>
+            </div>
+            <div class="hero__mini-stat">
+              <strong>100%</strong>
+              <span>responsive</span>
+            </div>
+            <div class="hero__mini-stat">
+              <strong>HTML/CSS</strong>
+              <span>maîtrisés</span>
+            </div>
+          </div>
+
           <div class="hero__tech">
             <span class="tech-badge">HTML5</span>
             <span class="tech-badge">CSS3</span>
@@ -503,9 +519,9 @@
             </div>
             <pre class="code-card__body"><code><span class="c-tag">&lt;section</span> <span class="c-attr">class</span>=<span class="c-str">"hero"</span><span class="c-tag">&gt;</span>
   <span class="c-tag">&lt;h1&gt;</span><span class="c-text">Angélo Koffi EDEMNAWO</span><span class="c-tag">&lt;/h1&gt;</span>
-  <span class="c-tag">&lt;p&gt;</span><span class="c-text">Développeur Web</span><span class="c-tag">&lt;/p&gt;</span>
+  <span class="c-tag">&lt;p&gt;</span><span class="c-text">Développeur Web Front-End</span><span class="c-tag">&lt;/p&gt;</span>
   <span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-str">"#contact"</span><span class="c-tag">&gt;</span>
-    <span class="c-text">Me contacter</span>
+    <span class="c-text">Parler de votre projet</span>
   <span class="c-tag">&lt;/a&gt;</span>
 <span class="c-tag">&lt;/section&gt;</span></code></pre>
           </div>
@@ -541,6 +557,117 @@
         <div class="stat-card">
           <span class="stat-card__number">↗</span>
           <span class="stat-card__label">JavaScript en apprentissage</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-portfolio section" aria-label="Portfolio en avant sur la page d'accueil">
+      <div class="container">
+        <div class="home-portfolio__header">
+          <div>
+            <span class="section__eyebrow">Portfolio</span>
+            <h2 class="section__title">Des projets pensés pour l'impact</h2>
+          </div>
+          <a href="#" class="btn btn--outline" onclick="showPage('portfolio'); return false;">Voir tout le portfolio</a>
+        </div>
+
+        <div class="home-portfolio__grid">
+          <article class="home-project-card home-project-card--featured">
+            <div class="home-project-card__media">
+              <img src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1781744485/WhatsApp_Image_2026-06-18_at_12.59.40_AM_irnaqi.jpg" alt="Projet Youth Connect" />
+            </div>
+            <div class="home-project-card__body">
+              <span class="home-project-card__tag">Forum communautaire</span>
+              <h3>Youth_Connect</h3>
+              <p>
+                Une plateforme collaborative pour jeunes francophones afin d’échanger, poser des questions,
+                accéder à des ressources et développer des compétences autour du numérique.
+              </p>
+              <ul>
+                <li>Authentification et espace utilisateur</li>
+                <li>Interface moderne et responsive</li>
+                <li>Expérience centrée sur la communauté</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="home-project-card">
+            <div class="home-project-card__media">
+              <img src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1781744485/WhatsApp_Image_2026-06-18_at_12.59.40_AM_irnaqi.jpg" alt="Projet portfolio" />
+            </div>
+            <div class="home-project-card__body">
+              <span class="home-project-card__tag">Portfolio</span>
+              <h3>Portfolio personnel</h3>
+              <p>Un site vitrine pensé pour présenter les compétences, les services et les réalisations avec un style premium.</p>
+              <div class="project-card__tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="home-overview section" aria-label="Résumé de toutes les sections du portfolio">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Vue d’ensemble</span>
+          <h2 class="section__title">Un parcours clair, du profil à la réalisation</h2>
+          <p class="section__subtitle">Voici un résumé rapide de chaque partie de mon portfolio pour mieux comprendre mon travail et mes compétences.</p>
+        </div>
+
+        <div class="home-overview__grid">
+          <article class="overview-card" onclick="showPage('apropos'); return false;">
+            <span class="overview-card__number">01</span>
+            <h3>À propos</h3>
+            <p>Une présentation de ma personnalité, de ma passion pour le web et de mon ambition de devenir développeur front-end professionnel.</p>
+          </article>
+
+          <article class="overview-card" onclick="showPage('competences'); return false;">
+            <span class="overview-card__number">02</span>
+            <h3>Compétences</h3>
+            <p>Les outils et technologies que je maîtrise déjà ainsi que les domaines dans lesquels je continue à évoluer.</p>
+          </article>
+
+          <article class="overview-card" onclick="showPage('services'); return false;">
+            <span class="overview-card__number">03</span>
+            <h3>Services</h3>
+            <p>Des prestations de création de sites vitrines, landing pages, intégration web, optimisation responsive et maintenance.</p>
+          </article>
+
+          <article class="overview-card" onclick="showPage('portfolio'); return false;">
+            <span class="overview-card__number">04</span>
+            <h3>Portfolio</h3>
+            <p>Une sélection de réalisations montrant la qualité de mon travail, mon style et les solutions que je peux livrer.</p>
+          </article>
+
+          <article class="overview-card" onclick="showPage('certification'); return false;">
+            <span class="overview-card__number">05</span>
+            <h3>Certification</h3>
+            <p>Les preuves de mes compétences et les projets qui valident mon niveau actuel dans le développement web.</p>
+          </article>
+
+          <article class="overview-card" onclick="showPage('parcours'); return false;">
+            <span class="overview-card__number">06</span>
+            <h3>Parcours</h3>
+            <p>Mon évolution, mes apprentissages et la progression qui me mène vers un avenir professionnel solide.</p>
+          </article>
+
+          <article class="overview-card overview-card--cta" onclick="showPage('contact'); return false;">
+            <span class="overview-card__number">07</span>
+            <h3>Contact</h3>
+            <p>Un espace simple pour discuter d’un projet, d’une mission ou d’une collaboration professionnelle.</p>
+          </article>
         </div>
       </div>
     </section>
