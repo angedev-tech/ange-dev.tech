@@ -253,3 +253,45 @@ fadeEls.forEach(el => fadeObserver.observe(el));
     }
   });
 })();
+/* ==========================================================
+   CARROUSEL INFINI – technologies maîtrisées
+   À charger APRÈS javascript.js
+   Pour ajouter une technologie : une ligne dans TECHNOLOGIES.
+   ========================================================== */
+(function () {
+  const CDN = 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/';
+
+  const TECHNOLOGIES = [
+    { name: 'HTML5',      icon: 'html5/html5-original.svg' },
+    { name: 'CSS3',       icon: 'css3/css3-original.svg' },
+    { name: 'JavaScript', icon: 'javascript/javascript-original.svg' },
+    { name: 'Git',        icon: 'git/git-original.svg' },
+    { name: 'GitHub',     icon: 'github/github-original.svg' },
+    { name: 'Figma',      icon: 'figma/figma-original.svg' }
+    // Pour ajouter une technologie : une ligne ici (avec une virgule sur la ligne d'avant)
+  ];
+
+  // Le carrousel s'insère sur l'accueil, juste avant la section « Portfolio »
+  const anchor = document.querySelector('#page-accueil .home-portfolio');
+  if (!anchor) return;
+
+  const item = (tech, hidden) =>
+    `<li class="marquee__item"${hidden ? ' aria-hidden="true"' : ''}>` +
+    `<img src="${CDN}${tech.icon}" alt="" width="40" height="40"><span>${tech.name}</span></li>`;
+
+  const real = TECHNOLOGIES.map((t) => item(t, false)).join('');
+  const copies = TECHNOLOGIES.map((t) => item(t, true)).join('');
+
+  const section = document.createElement('section');
+  section.className = 'tech-marquee';
+  section.setAttribute('aria-label', 'Technologies que je maîtrise');
+  section.innerHTML =
+    '<div class="container"><h2 class="tech-marquee__title">Les technologies que je maîtrise</h2></div>' +
+    '<div class="marquee"><div class="marquee__track">' +
+    // Chaque groupe répète la liste, et le 2e groupe est un clone : boucle sans coupure
+    `<ul class="marquee__group">${real}${copies}</ul>` +
+    `<ul class="marquee__group" aria-hidden="true">${real}${copies}</ul>` +
+    '</div></div>';
+
+  anchor.parentNode.insertBefore(section, anchor);
+})();

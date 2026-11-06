@@ -3076,3 +3076,77 @@ details[open] .faq__question::after {
     flex-direction: column;
   }
 }
+
+/* ==========================================================
+   CARROUSEL INFINI – technologies maîtrisées
+   À charger APRÈS style.css (il utilise ses variables)
+   ========================================================== */
+.tech-marquee {
+  background: var(--color-white);
+  border-block: 1px solid var(--color-gray-mid);
+  padding-block: var(--space-xl);
+  text-align: center;
+}
+
+.tech-marquee__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-dark);
+  margin-bottom: var(--space-lg);
+}
+
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+.marquee__group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100vw;
+}
+
+.marquee__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 2.25rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.marquee__item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+@keyframes marquee-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 480px) {
+  .marquee__item { padding-inline: 1.4rem; }
+  .marquee__item img { width: 32px; height: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee { overflow-x: auto; }
+  .marquee__track { animation: none; }
+}
