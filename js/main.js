@@ -15,6 +15,19 @@ document.querySelectorAll('.nav__link[data-page]').forEach((link) => {
 });
 const backToTop = document.getElementById('backToTop');
 if (backToTop) backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+const projectCta = document.createElement('a');
+const isProjectPage = window.location.pathname.toLowerCase().endsWith('/demander-projet.html');
+projectCta.className = 'project-cta';
+projectCta.href = isProjectPage
+  ? '#dpForm'
+  : document.body.dataset.page === 'accueil'
+    ? 'html/demander-projet.html'
+    : 'demander-projet.html';
+projectCta.setAttribute('aria-label', 'Demander un projet');
+projectCta.innerHTML = '<span>Demander un projet</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i>';
+document.body.appendChild(projectCta);
+
 const fadeEls = document.querySelectorAll('.service-card, .project-card, .goal-card, .testimonial-card, .stat-card');
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {

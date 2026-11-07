@@ -638,13 +638,6 @@ button {
     max-width: min(92vw, 700px);
   }
 
-  .back-to-top {
-    bottom: 1.2rem;
-    right: 1.2rem;
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-  }
 }
 
 /* ----------------------------------------------------------
@@ -790,6 +783,68 @@ button {
 }
 
 /* ----------------------------------------------------------
+   BOUTON FLOTTANT — DEMANDER UN PROJET
+   ---------------------------------------------------------- */
+.project-cta {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1001;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  max-width: calc(100vw - 2rem);
+  padding: 0.95rem 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 55%, #1746ad 100%);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  box-shadow: 0 7px 0 #123a91, 0 14px 26px rgba(15, 23, 42, 0.28);
+  transform: perspective(800px) rotateX(8deg);
+  transform-style: preserve-3d;
+  animation: projectCtaFloat 3s ease-in-out infinite;
+  transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.project-cta i {
+  transition: transform 0.2s ease;
+}
+
+.project-cta:hover {
+  color: var(--color-white);
+  background: linear-gradient(135deg, #1d4ed8, #123a91);
+  box-shadow: 0 3px 0 #123a91, 0 8px 18px rgba(15, 23, 42, 0.24);
+  animation-play-state: paused;
+  transform: perspective(800px) rotateX(0) translateY(3px);
+}
+
+.project-cta:hover i {
+  transform: translateX(3px);
+}
+
+.project-cta:active {
+  box-shadow: 0 0 0 #123a91, 0 3px 8px rgba(15, 23, 42, 0.2);
+  transform: perspective(800px) rotateX(0) translateY(6px);
+}
+
+@keyframes projectCtaFloat {
+  0%, 100% {
+    transform: perspective(800px) rotateX(8deg) translateY(0);
+    box-shadow: 0 7px 0 #123a91, 0 14px 26px rgba(15, 23, 42, 0.28);
+  }
+
+  50% {
+    transform: perspective(800px) rotateX(8deg) translateY(-5px);
+    box-shadow: 0 11px 0 #123a91, 0 20px 30px rgba(15, 23, 42, 0.24);
+  }
+}
+
+/* ----------------------------------------------------------
    BOUTON RETOUR EN HAUT
    ---------------------------------------------------------- */
 .back-to-top {
@@ -816,6 +871,7 @@ button {
 }
 
 .back-to-top--visible {
+  bottom: 6.5rem;
   opacity: 1;
   visibility: visible;
   transform: none;
@@ -824,6 +880,27 @@ button {
 .back-to-top:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 480px) {
+  .project-cta {
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.85rem 1.05rem;
+    font-size: 0.8rem;
+  }
+
+  .back-to-top {
+    bottom: 1.2rem;
+    right: 1.2rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .back-to-top.back-to-top--visible {
+    bottom: 5rem;
+  }
 }
 
 /* ==========================================================

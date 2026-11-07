@@ -7,18 +7,48 @@
 
 .about__photo {
   position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 390px;
+  margin-inline: auto;
+}
+
+.about__photo::before {
+  position: absolute;
+  z-index: -1;
+  inset: 20px -14px -14px 20px;
+  border-radius: calc(var(--radius-lg) + 8px);
+  background: var(--grad-primary);
+  content: "";
+  opacity: 0.2;
 }
 
 .about__photo-frame {
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
+  border: 6px solid var(--color-white);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  background: var(--color-gray-light);
+}
+
+.about__photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  transition: transform 0.5s ease;
+}
+
+.about__photo:hover .about__photo-frame img {
+  transform: scale(1.035);
 }
 
 .about__photo-badge {
   position: absolute;
-  bottom: -12px;
-  right: -12px;
+  bottom: 12px;
+  right: -18px;
   background: var(--grad-primary);
   color: var(--color-white);
   font-size: 0.85rem;
@@ -53,6 +83,10 @@
   .about__actions .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .about__photo-badge {
+    right: -10px;
   }
 }
 
