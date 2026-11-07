@@ -1,0 +1,314 @@
+.timeline__track {
+  position: relative;
+  max-width: 740px;
+  margin-inline: auto;
+  padding-left: 60px;
+}
+
+.timeline__track::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-gray-mid);
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: var(--space-lg);
+}
+
+.timeline__marker {
+  position: absolute;
+  left: -48px;
+  top: 4px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-gray-mid);
+  border: 3px solid var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+  z-index: 1;
+}
+
+.timeline__item--done .timeline__marker {
+  background: var(--grad-primary);
+  color: var(--color-white);
+}
+
+.timeline__item--active .timeline__marker {
+  background: var(--grad-primary);
+  color: var(--color-white);
+  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
+  animation: pulse-marker 2s ease infinite;
+}
+
+@keyframes pulse-marker {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0.08);
+  }
+}
+
+.timeline__content {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-mid);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline__item--active .timeline__content {
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+}
+
+.timeline__content h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.3rem;
+}
+
+.timeline__content p {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.timeline__status {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #16a34a;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 0.15em 0.7em;
+  border-radius: var(--radius-full);
+}
+
+.timeline__status--active {
+  color: var(--color-primary);
+  background: rgba(37, 99, 235, 0.06);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.timeline__status--future {
+  color: var(--color-text);
+  background: var(--color-gray-light);
+  border-color: var(--color-gray-mid);
+}
+
+.img {
+  width: 0px;
+}
+
+/* ----------------------------------------------------------
+   12. OBJECTIFS
+   ---------------------------------------------------------- */
+.goals__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-md);
+}
+
+.goal-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  border: 1px solid var(--color-gray-mid);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.goal-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+  display: block;
+  width: 50px;
+}
+
+.goal-card h3 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.4rem;
+}
+
+.goal-card p {
+  font-size: 0.82rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* ----------------------------------------------------------
+   13. TÉMOIGNAGES
+   ---------------------------------------------------------- */
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.testimonial-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-mid);
+  transition: var(--transition);
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 4rem;
+  color: var(--color-primary);
+  opacity: 0.1;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-card__stars {
+  color: #fbbf24;
+  font-size: 1rem;
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.1em;
+}
+
+.testimonial-card__text {
+  font-size: 0.92rem;
+  color: var(--color-text);
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.testimonial-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.testimonial-card__author strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+}
+
+.testimonial-card__author span {
+  font-size: 0.8rem;
+  color: var(--color-text);
+}
+
+/* ----------------------------------------------------------
+   14. FAQ
+   ---------------------------------------------------------- */
+.faq__inner {
+  max-width: 740px;
+  margin-inline: auto;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.faq__item {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-mid);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+
+.faq__item[open] {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  cursor: pointer;
+  list-style: none;
+  gap: var(--space-sm);
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question::after {
+  content: '+';
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+
+details[open] .faq__question::after {
+  transform: rotate(45deg);
+}
+
+.faq__answer {
+  padding: 0 var(--space-lg) var(--space-md);
+  font-size: 0.92rem;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* ----------------------------------------------------------
+   15. CONTACT
+   ---------------------------------------------------------- */

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Angelo Koffi – Développeur Web en Formation. Interfaces modernes, responsives et performantes." />
+  <title>Demander un projet – Ange_Dev</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/demander-projet.css" />
+</head>
+
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="../index.html" class="nav__logo">
+        <img
+          src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1781744480/WhatsApp_Image_2026-06-18_at_12.55.00_AM_onfon9.jpg"
+          alt="Logo Angelo Koffi" />
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__list" id="navList">
+        <li><a href="../index.html" class="nav__link">Accueil</a></li>
+        <li><a href="a-propos.html" class="nav__link">À propos</a></li>
+        <li><a href="competences.html" class="nav__link">Compétences</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+        <li><a href="certification.html" class="nav__link">Certification</a></li>
+        <li><a href="parcours.html" class="nav__link">Parcours</a></li>
+        <li><a href="contact.html" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="page-demander-projet" class="page page--active">
+    <section class="dp section">
+      <div class="container dp__wrap">
+        <h1 class="dp__title">Donnez vie à votre <em>projet digital</em>.</h1>
+        <p class="dp__lead">Exprimez vos besoins en quelques étapes simples. Notre équipe analysera votre projet et vous recontactera directement sur WhatsApp pour concevoir la meilleure solution.</p>
+
+        <ol class="dp__steps" id="dpSteps" aria-label="Progression de la demande">
+          <li>1. Projet</li><li>2. Modules</li><li>3. Délai</li><li>4. WhatsApp</li>
+        </ol>
+
+        <div class="dp__card">
+          <form id="dpForm" action="https://formspree.io/f/xdavvvjw" method="POST" enctype="multipart/form-data">
+
+            <!-- ÉTAPE 1 -->
+            <fieldset class="dp__panel">
+              <legend class="dp__h">Type de solution souhaitée</legend>
+              <p class="dp__sub">Sélectionnez la catégorie principale qui correspond à votre vision :</p>
+              <div class="dp__grid">
+                <label class="dp__opt"><input type="radio" name="type_solution" value="SaaS / Plateforme Web"><i class="dp__ico fa-solid fa-terminal"></i><span><b>SaaS / Plateforme Web</b><small>Application web sur mesure, architecture modulaire, API et espace membres</small></span></label>
+                <label class="dp__opt"><input type="radio" name="type_solution" value="Site Vitrine &amp; Identité"><i class="dp__ico fa-solid fa-display"></i><span><b>Site Vitrine &amp; Identité</b><small>Design sur mesure, performance extrême, SEO soigné et animations interactives</small></span></label>
+                <label class="dp__opt"><input type="radio" name="type_solution" value="Application Mobile"><i class="dp__ico fa-solid fa-mobile-screen-button"></i><span><b>Application Mobile</b><small>Application smartphone moderne, fluide et connectée à votre écosystème</small></span></label>
+                <label class="dp__opt"><input type="radio" name="type_solution" value="E-commerce &amp; Vente en ligne"><i class="dp__ico fa-solid fa-bag-shopping"></i><span><b>E-commerce &amp; Vente en ligne</b><small>Boutique en ligne avec passerelles mobiles (Wave, Orange Money) et cartes</small></span></label>
+                <label class="dp__opt"><input type="radio" name="type_solution" value="IA &amp; Automatisation"><i class="dp__ico fa-solid fa-robot"></i><span><b>IA &amp; Automatisation</b><small>Intégration d’agents IA, modèles LLM et automatisation de vos processus métier</small></span></label>
+                <label class="dp__opt"><input type="radio" name="type_solution" value="Design UI/UX &amp; Refonte"><i class="dp__ico fa-solid fa-palette"></i><span><b>Design UI/UX &amp; Refonte</b><small>Conception de maquettes interactives haute fidélité et refonte ergonomique</small></span></label>
+              </div>
+            </fieldset>
+
+            <!-- ÉTAPE 2 -->
+            <fieldset class="dp__panel" hidden>
+              <legend class="dp__h">Modules &amp; fonctionnalités clés</legend>
+              <p class="dp__sub">Cochez tous les modules qui enrichiront l’expérience de vos utilisateurs :</p>
+              <div class="dp__grid">
+                <label class="dp__chk"><span>Espace client / Authentification sécurisée</span><input type="checkbox" name="modules" value="Espace client / Authentification sécurisée"></label>
+                <label class="dp__chk"><span>Paiements mobiles &amp; carte (Wave, Orange Money, Visa)</span><input type="checkbox" name="modules" value="Paiements mobiles &amp; carte (Wave, Orange Money, Visa)"></label>
+                <label class="dp__chk"><span>Tableau de bord administrateur &amp; KPIs</span><input type="checkbox" name="modules" value="Tableau de bord administrateur &amp; KPIs"></label>
+                <label class="dp__chk"><span>Intégration Intelligence Artificielle / Chatbot</span><input type="checkbox" name="modules" value="Intégration Intelligence Artificielle / Chatbot"></label>
+                <label class="dp__chk"><span>Notifications automatiques WhatsApp &amp; SMS</span><input type="checkbox" name="modules" value="Notifications automatiques WhatsApp &amp; SMS"></label>
+                <label class="dp__chk"><span>Système de réservation ou prise de rendez-vous</span><input type="checkbox" name="modules" value="Système de réservation ou prise de rendez-vous"></label>
+                <label class="dp__chk"><span>Architecture multilingue (Français / Anglais)</span><input type="checkbox" name="modules" value="Architecture multilingue (Français / Anglais)"></label>
+                <label class="dp__chk"><span>Espace blog / Gestion de contenu autonome</span><input type="checkbox" name="modules" value="Espace blog / Gestion de contenu autonome"></label>
+              </div>
+            </fieldset>
+
+            <!-- ÉTAPE 3 -->
+            <fieldset class="dp__panel" hidden>
+              <legend class="dp__h">Délai souhaité de lancement</legend>
+              <p class="dp__sub">Cela permet à notre équipe d’ajuster le calendrier d’ingénierie :</p>
+              <div class="dp__grid">
+                <label class="dp__opt"><input type="radio" name="delai" value="Urgent – Moins de 2 semaines"><span><b>Urgent</b><small>Moins de 2 semaines</small></span><i class="fa-regular fa-clock"></i></label>
+                <label class="dp__opt"><input type="radio" name="delai" value="1 mois – Délai standard"><span><b>1 mois</b><small>Délai standard</small></span><i class="fa-regular fa-clock"></i></label>
+                <label class="dp__opt"><input type="radio" name="delai" value="2 à 3 mois – Projet complet"><span><b>2 à 3 mois</b><small>Projet complet</small></span><i class="fa-regular fa-clock"></i></label>
+                <label class="dp__opt"><input type="radio" name="delai" value="Flexible – Pas de date limite stricte"><span><b>Flexible</b><small>Pas de date limite stricte</small></span><i class="fa-regular fa-clock"></i></label>
+              </div>
+              <div class="dp__note"><i class="fa-regular fa-comment-dots"></i><div><b>Contact direct WhatsApp sous 24h</b>
+                <p>Pas de devis automatisé impersonnel. Dès réception, nous vous contactons sur WhatsApp pour échanger sur vos objectifs et vous accompagner.</p></div></div>
+            </fieldset>
+
+            <!-- ÉTAPE 4 -->
+            <fieldset class="dp__panel" hidden>
+              <legend class="dp__h">Vos coordonnées &amp; brief</legend>
+              <p class="dp__sub">Indiquez votre numéro WhatsApp pour que nous puissions échanger dès réception :</p>
+              <div class="dp__row">
+                <label class="dp__f"><span>Nom complet *</span><input name="nom" required autocomplete="name" placeholder="Votre nom"></label>
+                <label class="dp__f"><span>Entreprise (optionnel)</span><input name="entreprise" autocomplete="organization" placeholder="Société / Marque"></label>
+              </div>
+              <div class="dp__row">
+                <label class="dp__f"><span>Email *</span><input type="email" name="email" required autocomplete="email" placeholder="email@domaine.com"></label>
+                <div class="dp__f"><span>Numéro WhatsApp * <em class="dp__tag"><i class="fa-regular fa-comment-dots"></i> Contact sous 24h</em></span>
+                  <div class="dp__tel">
+                    <select name="indicatif" aria-label="Indicatif du pays">
+                      <option value="+228">TG +228</option>
+                      <option value="+229">BJ +229</option>
+                      <option value="+225">CI +225</option>
+                      <option value="+226">BF +226</option>
+                      <option value="+233">GH +233</option>
+                      <option value="+234">NG +234</option>
+                      <option value="+221">SN +221</option>
+                      <option value="+223">ML +223</option>
+                      <option value="+227">NE +227</option>
+                      <option value="+237">CM +237</option>
+                      <option value="+33">FR +33</option>
+                      <option value="+32">BE +32</option>
+                      <option value="+1">CA +1</option>
+                    </select>
+                    <input type="tel" name="whatsapp" required inputmode="tel" autocomplete="tel-national" pattern="[0-9 \-.]{6,18}" title="Numéro sans l’indicatif du pays" placeholder="90 00 00 00" aria-label="Numéro WhatsApp">
+                  </div>
+                </div>
+              </div>
+              <label class="dp__f"><span>Description du besoin *</span><textarea name="description" rows="4" required placeholder="Présentez votre projet, la cible visée ou les fonctionnalités souhaitées..."></textarea></label>
+              <div class="dp__f"><span>Cahier des charges détaillé <em class="dp__mono">PDF · 15 Mo max</em></span>
+                <label class="dp__drop" id="dpDrop"><input type="file" name="cahier_des_charges" id="dpFile" accept="application/pdf,.pdf"><i class="fa-solid fa-file-arrow-up"></i>
+                  <span><b id="dpFileName">Joindre le cahier des charges</b><small id="dpFileHint">Glissez-déposez votre PDF ici ou cliquez pour le sélectionner.</small></span></label></div>
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+            </fieldset>
+
+            <p class="dp__msg" id="dpMsg" role="alert" hidden></p>
+            <div class="dp__nav">
+              <button type="button" class="dp__btn dp__btn--ghost" id="dpBack" hidden>Retour</button>
+              <button type="button" class="dp__btn dp__btn--next" id="dpNext" disabled><span id="dpNextLabel">Continuer</span> <i class="fa-solid fa-arrow-right"></i></button>
+              <button type="submit" class="dp__btn dp__btn--next" id="dpSend" hidden>Envoyer ma demande <i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </form>
+
+          <!-- Message affiché après l'envoi -->
+          <div class="dp__done" id="dpDone" hidden>
+            <i class="fa-solid fa-check"></i>
+            <h2>Demande envoyée !</h2>
+            <p id="dpDoneText"></p>
+            <a class="dp__btn dp__btn--wa" id="dpWa" href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Écrire sur WhatsApp</a>
+            <button type="button" class="dp__again" id="dpAgain">Faire une nouvelle demande</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="../index.html" class="footer__logo">
+          <img
+            src="https://res.cloudinary.com/dyo3r3lph/image/upload/v1781744480/WhatsApp_Image_2026-06-18_at_12.55.00_AM_onfon9.jpg"
+            alt="Logo Angelo Koffi" />
+        </a>
+        <p>Développeur Web en Formation. Passionné, rigoureux et toujours en apprentissage.</p>
+        <div class="footer__social">
+          <a href="https://x.com/Ange_Dev0" target="_blank" rel="noopener" aria-label="X"><img
+              src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="Twiterx"></a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><img
+              src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="Linkedin"></a>
+          <a href="https://www.facebook.com/share/1BG1mN116X/" target="_blank" rel="noopener" aria-label="Facebook"><img
+              src="https://img.icons8.com/?size=100&id=yGcWL8copNNQ&format=png&color=000000" alt="Facebook"></a>
+          <a href="https://www.instagram.com/goodfellagf?igsh=eDV4bDE3Z294Mmdv" target="_blank" rel="noopener"
+            aria-label="Instagram"><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000"
+              alt="Instagram"></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="portfolio.html">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="certification.html">Certification</a></li>
+          <li><a href="parcours.html">Parcours</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Sites vitrines</a></li>
+          <li><a href="services.html">Landing pages</a></li>
+          <li><a href="services.html">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:edemnawokoffiangelo@email.com">edemnawokoffiangelo@email.com</a></li>
+          <li><a href="tel:+22892603558">+228 92 60 35 58</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Ange_Dev – Développeur Web. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/demander-projet.js"></script>
+</body>
+
+</html>

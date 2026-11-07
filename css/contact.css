@@ -1,0 +1,221 @@
+/* Cartes directes en haut */
+.contact__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.contact__card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-mid);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.contact__card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.contact__card-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f1f5f9;
+  font-size: 1.2rem;
+}
+
+.contact__card-icon .fa-phone,
+.contact__card-icon .fa-envelope {
+  color: #4dabf7;
+}
+
+.contact__card-icon .fa-whatsapp {
+  color: #25D366;
+}
+
+.contact__card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.contact__card-label {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.contact__card-info strong {
+  font-size: 0.95rem;
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+.etoil::after {
+  content: '*';
+  color: #cc0808;
+  margin-left: 2px;
+  font-size: 0.9rem;
+}
+
+/* Grille info + formulaire */
+
+
+.contact__desc {
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
+  font-size: 1rem;
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #334155;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.contact__link:hover {
+  color: #1900ba;
+  transform: translateX(4px);
+}
+
+.contact__link-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f1f5f9;
+  font-size: 1rem;
+}
+
+.contact__link-icon .fa-envelope,
+.contact__link-icon .fa-phone {
+  color: #4dabf7;
+}
+
+.contact__link-icon .fa-github {
+  color: #181717;
+}
+
+.contact__link-icon .fa-linkedin-in {
+  color: #0A66C2;
+}
+
+/* Formulaire */
+.contact__form-wrap {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-mid);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: var(--space-sm);
+}
+
+.form__group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.form__group input,
+.form__group textarea {
+  border: 1.5px solid var(--color-gray-mid);
+  border-radius: var(--radius-sm);
+  padding: 0.7em 1em;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--color-dark);
+  background: var(--color-gray-light);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+  resize: vertical;
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background: var(--color-white);
+}
+
+.form__success {
+  display: none;
+  margin-top: var(--space-sm);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #16a34a;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-sm);
+  padding: 0.6em 1em;
+}
+
+.form__error {
+  display: none;
+  margin-top: var(--space-sm);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  padding: 0.6em 1em;
+}
+
+/* ----------------------------------------------------------
+   18. RESPONSIVE – TABLETTE (max-width: 1024px)
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+
+  .portfolio__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .goals__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+}

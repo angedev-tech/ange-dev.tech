@@ -1,0 +1,104 @@
+.skills__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.skills__group-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.skill-item {
+  margin-bottom: var(--space-md);
+}
+
+.skills__group-icon {
+  width: 30px;
+}
+
+.skill-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.skill-item__name {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--color-text-dark);
+}
+
+.skill-item__pct {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.skill-bar {
+  height: 8px;
+  background: var(--color-gray-mid);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skill-bar__fill {
+  height: 100%;
+  background: var(--grad-primary);
+  border-radius: var(--radius-full);
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-bar__fill--learning {
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+}
+
+.skills__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.skill-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-mid);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm);
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  transition: var(--transition);
+  cursor: default;
+}
+
+.skill-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
+  transform: translateY(-2px);
+}
+
+.skill-card--learning {
+  border-color: #fbbf24;
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.skill-card__icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  width: 40px;
+}
+
+/* ----------------------------------------------------------
+   9. SERVICES
+   ---------------------------------------------------------- */

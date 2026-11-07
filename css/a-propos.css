@@ -1,0 +1,61 @@
+.about__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about__photo {
+  position: relative;
+}
+
+.about__photo-frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about__photo-badge {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  background: var(--grad-primary);
+  color: var(--color-white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.6em 1.2em;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  box-shadow: var(--shadow-md);
+}
+
+.about__text {
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+  font-size: 1rem;
+}
+
+.about__actions {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* Responsive mobile */
+@media (max-width: 480px) {
+  .about__actions {
+    flex-direction: column;
+  }
+
+  .about__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ----------------------------------------------------------
+   8. COMPÉTENCES
+   ---------------------------------------------------------- */

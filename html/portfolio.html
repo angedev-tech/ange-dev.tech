@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Angelo Koffi – Développeur Web en Formation. Interfaces modernes, responsives et performantes." />
+  <title>Ange_Dev | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/portfolio.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-page="portfolio">
+  <!-- ========== HEADER — Bleu épinglé ========== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="../index.html" class="nav__logo" >
+        <img
+          src="../images/logos/logo-angelo.jpg"
+          alt="Logo Angelo Koffi" />
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__list" id="navList">
+        <li><a href="../index.html" class="nav__link"
+             data-page="accueil">Accueil</a>
+        </li>
+        <li><a href="a-propos.html" class="nav__link"  data-page="apropos">À propos</a></li>
+        <li><a href="competences.html" class="nav__link"
+             data-page="competences">Compétences</a></li>
+        <li><a href="services.html" class="nav__link"  data-page="services">Services</a></li>
+        <li><a href="portfolio.html" class="nav__link nav__link--active"  data-page="portfolio">Portfolio</a>
+        </li>
+        <li><a href="certification.html" class="nav__link"
+             data-page="certification">Certification</a></li>
+        <li><a href="parcours.html" class="nav__link"  data-page="parcours">Parcours</a></li>
+        <li><a href="contact.html" class="nav__link nav__link--cta"
+             data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="page-portfolio" class="page page--active">
+    <section class="portfolio section section--gray" id="portfolio">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Mes réalisations</span>
+          <h2 class="section__title">Projets récents</h2>
+          <p class="section__subtitle">Chaque projet est une nouvelle occasion d'apprendre et de progresser.</p>
+        </div>
+
+        <div class="portfolio__grid">
+          <!-- Projet 1 -->
+          <article class="project-card">
+            <div class="project-card__img" style="--proj-color:#065f46">
+              <img
+                src="../images/projet-youthconnect.jpg"
+                alt="photo de mon projet">
+              <div class="project-card__overlay">
+                <a href="#yc-detail-modal" class="btn btn--outline btn--sm" onclick="ycOpen(event)">Aperçu</a>
+                <a href="https://youth-connect-eight.vercel.app/" class="btn btn--primary btn--sm" target="_blank"
+                  rel="noopener noreferrer">Détails</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Youth_Connect</h3>
+              <p class="project-card__desc">Youth_Connect est une plateforme de forum communautaire pensée pour les
+                jeunes africains francophones. Elle permet de poser des questions, partager des ressources et collaborer
+                autour de thématiques clés : études, emploi, entrepreneuriat, développement web et intelligence
+                artificielle. Le projet intègre Firebase Firestore pour la synchronisation en temps réel et propose une
+                gestion complète des comptes utilisateurs.</p>
+              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
+                  class="tag">Responsive</span></div>
+            </div>
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="project-card">
+            <div class="project-card__img" style="--proj-color:#0f172a">
+              <img
+                src="../images/projet-youthconnect.jpg"
+                alt="photo de mon projet">
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--primary btn--sm">Aperçu</a>
+                <a href="#" class="btn btn--outline btn--sm">Détails</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Projet à Venir</h3>
+              <p class="project-card__desc">Détails sur le site.</p>
+              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
+                  class="tag">Responsive</span></div>
+            </div>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="project-card">
+            <div class="project-card__img" style="--proj-color:#065f46">
+              <img
+                src="../images/projet-youthconnect.jpg"
+                alt="photo de mon projet">
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--primary btn--sm">Aperçu</a>
+                <a href="#" class="btn btn--outline btn--sm">Détails</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Projet à Venir</h3>
+              <p class="project-card__desc">Détails sur le site.</p>
+              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
+                  class="tag">Responsive</span></div>
+            </div>
+          </article>
+
+          <!-- Projet 4 -->
+          <article class="project-card">
+            <div class="project-card__img" style="--proj-color:#4c1d95">
+              <img
+                src="../images/projet-youthconnect.jpg"
+                alt="photo de mon projet">
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--primary btn--sm">Aperçu</a>
+                <a href="#" class="btn btn--outline btn--sm">Détails</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Projet à Venir</h3>
+              <p class="project-card__desc">Détails sur le site.</p>
+              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
+                  class="tag">Responsive</span></div>
+            </div>
+          </article>
+
+          <!-- Projet 5 -->
+          <article class="project-card">
+            <div class="project-card__img" style="--proj-color:#92400e">
+              <img
+                src="../images/projet-youthconnect.jpg"
+                alt="photo de mon projet">
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--primary btn--sm">Aperçu</a>
+                <a href="#" class="btn btn--outline btn--sm">Détails</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Projet à Venir</h3>
+              <p class="project-card__desc">Détails sur le site.</p>
+              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
+                  class="tag">Responsive</span></div>
+            </div>
+          </article>
+
+          <!-- Projet 6 -->
+          <article class="project-card">
+            <div class="project-card__img" style="--proj-color:#0e7490">
+              <img
+                src="../images/projet-youthconnect.jpg"
+                alt="photo de mon projet">
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--primary btn--sm">Aperçu</a>
+                <a href="#" class="btn btn--outline btn--sm">Détails</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Projet à Venir. </h3>
+              <p class="project-card__desc">Détails sur le site.</p>
+              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
+                  class="tag">Responsive</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<div id="yc-detail-modal" class="yc-overlay">
+    <div class="yc-modal" role="dialog" aria-modal="true" aria-label="Détails YouthConnect">
+      <div class="yc-header">
+        <div class="yc-header-left">
+          <img class="yc-logo"
+            src="../images/logos/logo-youthconnect.jpg"
+            alt="Logo YouthConnect" />
+          <div>
+            <div class="yc-title">YouthConnect</div>
+            <div class="yc-tagline">Forum collaboratif pour les jeunes africains</div>
+            <div class="yc-pills">
+              <span class="yc-pill">HTML5</span><span class="yc-pill">CSS3</span>
+              <span class="yc-pill">JavaScript</span><span class="yc-pill">Firebase</span>
+              <span class="yc-pill">Responsive</span>
+            </div>
+          </div>
+        </div>
+        <button class="yc-close" onclick="ycClose()" aria-label="Fermer">✕</button>
+      </div>
+      <div class="yc-body">
+        <div>
+          <p class="yc-stitle">À propos du projet</p>
+          <p class="yc-desc">YouthConnect est une plateforme de forum communautaire pensée pour les jeunes africains
+            francophones. Elle permet de poser des questions, partager des ressources et collaborer autour de
+            thématiques clés : études, emploi, entrepreneuriat, développement web et intelligence artificielle. Le
+            projet intègre Firebase Firestore pour la synchronisation en temps réel et propose une gestion complète des
+            comptes utilisateurs.</p>
+        </div>
+        <div>
+          <p class="yc-stitle">Stack technique</p>
+          <div class="yc-stack">
+            <span class="yc-tech"><img src="../images/icones/icons8-20909.png"
+                alt="html">HTML5</span>
+            <span class="yc-tech"><img src="../images/icones/icons8-21278.png"
+                alt="css">CSS3</span>
+            <span class="yc-tech"><img src="../images/icones/icons8-lTKW3iI3wIT0.png"
+                alt="js">JavaScript</span>
+            <span class="yc-tech"><img src="../images/icones/icons8-hd3MuNZs5KOp.png"
+                alt="firebase">Firebase</span>
+            <span class="yc-tech"><img src="../images/icones/icons8-LoL4bFzqmAa0.png"
+                alt="git">Git</span>
+            <span class="yc-tech"><img src="../images/icones/icons8-s9WkFl6q3URx.png"
+                alt="auth">Auth</span>
+          </div>
+        </div>
+        <div>
+          <p class="yc-stitle">Fonctionnalités</p>
+          <div class="yc-features">
+            <div class="yc-feat">
+              <div class="yc-feat-icon"><img
+                  src="../images/icones/icons8-F3QB8gOfWNW4.png" alt="forum" /></div>
+              <div class="yc-feat-body"><strong>Forum structuré</strong><span>Questions, réponses et filtres par
+                  catégorie avec recherche instantanée.</span></div>
+            </div>
+            <div class="yc-feat">
+              <div class="yc-feat-icon"><img
+                  src="../images/icones/icons8-hd3MuNZs5KOp.png" alt="Firebase"></div>
+              <div class="yc-feat-body"><strong>Temps réel Firebase</strong><span>Firestore onSnapshot — posts et
+                  commentaires se synchronisent sans rechargement.</span></div>
+            </div>
+            <div class="yc-feat">
+              <div class="yc-feat-icon"><img
+                  src="../images/icones/icons8-s9WkFl6q3URx.png" alt="utilisateurs">
+              </div>
+              <div class="yc-feat-body"><strong>Comptes utilisateurs</strong><span>Inscription, connexion et tableau de
+                  bord personnel avec historique complet.</span></div>
+            </div>
+            <div class="yc-feat">
+              <div class="yc-feat-icon"><img
+                  src="../images/icones/icons8-p3miLroKw4iR.png" alt="recherche" />
+              </div>
+              <div class="yc-feat-body"><strong>Recherche instantanée</strong><span>Filtre les questions en live par
+                  mot-clé, auteur ou catégorie.</span></div>
+            </div>
+            <div class="yc-feat">
+              <div class="yc-feat-icon"><img
+                  src="../images/icones/icons8-sBZH6PgYSXIA.png" alt="Responsive"></div>
+              <div class="yc-feat-body"><strong>100 % Responsive</strong><span>Téléphone, tablette et bureau — menu
+                  burger mobile intégré.</span></div>
+            </div>
+            <div class="yc-feat">
+              <div class="yc-feat-icon"><img
+                  src="../images/icones/icons8-GgtsKo0I4dM3.png" alt="Notifications">
+              </div>
+              <div class="yc-feat-body"><strong>Notifications animées</strong><span>Retours visuels avec animation slide
+                  pour chaque action utilisateur.</span></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="yc-stitle">Catégories couvertes</p>
+          <div class="yc-cats">
+            <span class="yc-cat"><img
+                src="../images/categorie-etudes.jpg"
+                alt="">Études</span>
+            <span class="yc-cat"><img
+                src="../images/categorie-informatique.jpg"
+                alt="">Informatique</span>
+            <span class="yc-cat"><img
+                src="../images/categorie-developpement-web.jpg"
+                alt="">Développement Web</span>
+            <span class="yc-cat"><img
+                src="../images/categorie-entrepreneuriat.jpg"
+                alt="">Entrepreneuriat</span>
+            <span class="yc-cat"><img
+                src="../images/categorie-emploi.jpg"
+                alt="">Emploi</span>
+            <span class="yc-cat"><img
+                src="../images/categorie-intelligence-artificielle.jpg"
+                alt="">Intelligence Artificielle</span>
+            <span class="yc-cat"><img
+                src="../images/categorie-motivation.jpg"
+                alt="">Motivation</span>
+            <span class="yc-cat"><img
+                src="../images/categorie-bourses.jpg"
+                alt="">Bourses d'études</span>
+          </div>
+        </div>
+        <div>
+          <p class="yc-stitle">Aperçus de l'interface</p>
+          <div class="yc-screens">
+            <div class="yc-screen"><img
+                src="../images/youthconnect-accueil.png"
+                alt="Page d'accueil">
+              <div
+                style="background:var(--yc-gray-50);padding:5px 10px;font-size:.68rem;color:var(--yc-blue);font-weight:600;font-family:var(--yc-font-b);">
+                🏠 Page d'accueil</div>
+            </div>
+            <div class="yc-screen"><img
+                src="../images/youthconnect-forum.png"
+                alt="Forum de discussion">
+              <div
+                style="background:var(--yc-gray-50);padding:5px 10px;font-size:.68rem;color:var(--yc-blue);font-weight:600;font-family:var(--yc-font-b);">
+                💬 Forum de discussion</div>
+            </div>
+          </div>
+        </div>
+        <div class="yc-actions">
+          <a href="https://youth-connect-eight.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="yc-btn yc-btn-p">Voir le site en ligne</a>
+          <button class="yc-btn yc-btn-g" onclick="ycClose()">← Retour au portfolio</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="../index.html" class="footer__logo" >
+          <img
+            src="../images/logos/logo-angelo.jpg"
+            alt="Logo Angelo Koffi" />
+        </a>
+        <p>Développeur Web en Formation. Passionné, rigoureux et toujours en apprentissage.</p>
+        <div class="footer__social">
+          <a href="https://x.com/Ange_Dev0" target="_blank" rel="noopener" aria-label="X"><img
+              src="../images/icones/icons8-phOKFKYpe00C.png" alt="Twiterx"></a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><img
+              src="../images/icones/icons8-xuvGCOXi8Wyg.png" alt="Linkedin"></a>
+          <a href="https://www.facebook.com/share/1BG1mN116X/" target="_blank" rel="noopener" aria-label="Facebook"><img
+              src="../images/icones/icons8-yGcWL8copNNQ.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/goodfellagf?igsh=eDV4bDE3Z294Mmdv" target="_blank" rel="noopener"
+            aria-label="Instagram"><img src="../images/icones/icons8-Xy10Jcu1L2Su.png"
+              alt="Instagram"></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="../index.html" >Accueil</a></li>
+          <li><a href="portfolio.html" >Projets</a></li>
+          <li><a href="contact.html" >Contact</a></li>
+          <li><a href="certification.html" >Certification</a></li>
+          <li><a href="parcours.html" >Parcours</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html" >Sites vitrines</a></li>
+          <li><a href="services.html" >Landing pages</a></li>
+          <li><a href="services.html" >Portfolio</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:edemnawokoffiangelo@email.com">edemnawokoffiangelo@email.com</a></li>
+          <li><a href="tel:+22892603558">+228 92 60 35 58</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Ange_Dev – Développeur Web. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
+  <script src="../js/main.js"></script>
+  <script src="../js/portfolio.js"></script>
+</body>
+</html>
