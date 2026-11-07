@@ -1,3 +1,21 @@
+// Filtres de la galerie
+const projectFilters = document.querySelectorAll('[data-project-filter]');
+const projectCards = document.querySelectorAll('.project-card[data-project-category]');
+
+projectFilters.forEach((filter) => {
+  filter.addEventListener('click', () => {
+    const category = filter.dataset.projectFilter;
+    projectFilters.forEach((button) => {
+      const isActive = button === filter;
+      button.classList.toggle('is-active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
+    });
+    projectCards.forEach((card) => {
+      card.hidden = category !== 'all' && card.dataset.projectCategory !== category;
+    });
+  });
+});
+
 // 10. YOUTHCONNECT MODAL
 // ============================================================
 (function () {

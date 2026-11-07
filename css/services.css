@@ -67,6 +67,20 @@
   line-height: 1.6;
 }
 
+.service-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.service-card__cta:hover {
+  color: var(--color-secondary);
+}
+
 .service-card__image-wrap {
   margin-bottom: var(--space-sm);
 }

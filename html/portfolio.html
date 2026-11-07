@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Angelo Koffi – Développeur Web en Formation. Interfaces modernes, responsives et performantes." />
-  <title>Ange_Dev | Portfolio</title>
+  <meta name="description" content="Projets web d’Angelo Koffi : découvrez Youth_Connect et son portfolio personnel, leurs objectifs et leurs technologies." />
+  <title>Portfolio | Angedev.tech</title>
+  <link rel="canonical" href="https://ange-dev-tech.vercel.app/html/portfolio.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Projets web | Angedev.tech" />
+  <meta property="og:description" content="Découvrez les projets web réalisés par Angelo Koffi." />
+  <meta property="og:url" content="https://ange-dev-tech.vercel.app/html/portfolio.html" />
+  <meta property="og:image" content="https://ange-dev-tech.vercel.app/images/projet-youthconnect-apercu.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -19,7 +26,7 @@
       <a href="../index.html" class="nav__logo" >
         <img
           src="../images/logos/logo-angelo.jpg"
-          alt="Logo Angelo Koffi" />
+          alt="Logo Angedev.tech" />
       </a>
 
       <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu">
@@ -36,6 +43,7 @@
         <li><a href="services.html" class="nav__link"  data-page="services">Services</a></li>
         <li><a href="portfolio.html" class="nav__link nav__link--active"  data-page="portfolio">Portfolio</a>
         </li>
+        <li><a href="blog.html" class="nav__link" data-page="blog">Blog</a></li>
         <li><a href="certification.html" class="nav__link"
              data-page="certification">Certification</a></li>
         <li><a href="parcours.html" class="nav__link"  data-page="parcours">Parcours</a></li>
@@ -53,18 +61,21 @@
           <p class="section__subtitle">Chaque projet est une nouvelle occasion d'apprendre et de progresser.</p>
         </div>
 
+        <div class="portfolio-filters" role="group" aria-label="Filtrer les projets">
+          <button type="button" class="portfolio-filter is-active" data-project-filter="all" aria-pressed="true">Tous</button>
+          <button type="button" class="portfolio-filter" data-project-filter="application" aria-pressed="false">Applications web</button>
+          <button type="button" class="portfolio-filter" data-project-filter="portfolio" aria-pressed="false">Portfolio</button>
+        </div>
+
         <div class="portfolio__grid">
-          <!-- Projet 1 -->
-          <article class="project-card">
+          <article class="project-card" data-project-category="application">
             <div class="project-card__img" style="--proj-color:#065f46">
               <img
                 src="../images/projet-youthconnect-apercu.png"
-                alt="Page d’accueil du projet YouthConnect">
-              <div class="project-card__overlay">
-                <a href="#yc-detail-modal" class="btn btn--outline btn--sm" onclick="ycOpen(event)">Aperçu</a>
-                <a href="https://youth-connect-eight.vercel.app/" class="btn btn--primary btn--sm" target="_blank"
-                  rel="noopener noreferrer">Détails</a>
-              </div>
+                alt="Page d’accueil du projet YouthConnect"
+                loading="lazy"
+                decoding="async">
+              <span class="project-card__status"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> En ligne</span>
             </div>
             <div class="project-card__body">
               <h3 class="project-card__title">Youth_Connect</h3>
@@ -75,91 +86,28 @@
                 gestion complète des comptes utilisateurs.</p>
               <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
                   class="tag">Responsive</span></div>
+              <div class="project-card__actions">
+                <a href="#yc-detail-modal" class="btn btn--outline btn--sm" onclick="ycOpen(event)">Aperçu</a>
+                <a href="https://youth-connect-eight.vercel.app/" class="btn btn--primary btn--sm" target="_blank"
+                  rel="noopener noreferrer">Voir le projet</a>
+              </div>
             </div>
           </article>
 
-          <!-- Projet 2 -->
-          <article class="project-card">
+          <article class="project-card" data-project-category="portfolio">
             <div class="project-card__img" style="--proj-color:#0f172a">
-              <span class="project-card__placeholder">Aperçu bientôt disponible</span>
-              <div class="project-card__overlay">
-                <a href="#" class="btn btn--primary btn--sm">Aperçu</a>
-                <a href="#" class="btn btn--outline btn--sm">Détails</a>
-              </div>
+              <img src="../images/logos/logo-angelo.jpg" alt="Identité visuelle du portfolio Angedev.tech" loading="lazy" decoding="async">
+              <span class="project-card__status"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> En ligne</span>
             </div>
             <div class="project-card__body">
-              <h3 class="project-card__title">Projet à Venir</h3>
-              <p class="project-card__desc">Détails sur le site.</p>
+              <h3 class="project-card__title">Portfolio Angedev.tech</h3>
+              <p class="project-card__desc">Portfolio personnel conçu pour présenter mon parcours, mes compétences et mes réalisations.</p>
               <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
-                  class="tag">Responsive</span></div>
-            </div>
-          </article>
-
-          <!-- Projet 3 -->
-          <article class="project-card">
-            <div class="project-card__img" style="--proj-color:#065f46">
-              <span class="project-card__placeholder">Aperçu bientôt disponible</span>
-              <div class="project-card__overlay">
-                <a href="#" class="btn btn--primary btn--sm">Aperçu</a>
-                <a href="#" class="btn btn--outline btn--sm">Détails</a>
+                  class="tag">JavaScript</span><span class="tag">Responsive</span></div>
+              <div class="project-card__actions">
+                <a href="https://ange-dev-tech.vercel.app/" class="btn btn--primary btn--sm" target="_blank"
+                  rel="noopener noreferrer">Voir le site</a>
               </div>
-            </div>
-            <div class="project-card__body">
-              <h3 class="project-card__title">Projet à Venir</h3>
-              <p class="project-card__desc">Détails sur le site.</p>
-              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
-                  class="tag">Responsive</span></div>
-            </div>
-          </article>
-
-          <!-- Projet 4 -->
-          <article class="project-card">
-            <div class="project-card__img" style="--proj-color:#4c1d95">
-              <span class="project-card__placeholder">Aperçu bientôt disponible</span>
-              <div class="project-card__overlay">
-                <a href="#" class="btn btn--primary btn--sm">Aperçu</a>
-                <a href="#" class="btn btn--outline btn--sm">Détails</a>
-              </div>
-            </div>
-            <div class="project-card__body">
-              <h3 class="project-card__title">Projet à Venir</h3>
-              <p class="project-card__desc">Détails sur le site.</p>
-              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
-                  class="tag">Responsive</span></div>
-            </div>
-          </article>
-
-          <!-- Projet 5 -->
-          <article class="project-card">
-            <div class="project-card__img" style="--proj-color:#92400e">
-              <span class="project-card__placeholder">Aperçu bientôt disponible</span>
-              <div class="project-card__overlay">
-                <a href="#" class="btn btn--primary btn--sm">Aperçu</a>
-                <a href="#" class="btn btn--outline btn--sm">Détails</a>
-              </div>
-            </div>
-            <div class="project-card__body">
-              <h3 class="project-card__title">Projet à Venir</h3>
-              <p class="project-card__desc">Détails sur le site.</p>
-              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
-                  class="tag">Responsive</span></div>
-            </div>
-          </article>
-
-          <!-- Projet 6 -->
-          <article class="project-card">
-            <div class="project-card__img" style="--proj-color:#0e7490">
-              <span class="project-card__placeholder">Aperçu bientôt disponible</span>
-              <div class="project-card__overlay">
-                <a href="#" class="btn btn--primary btn--sm">Aperçu</a>
-                <a href="#" class="btn btn--outline btn--sm">Détails</a>
-              </div>
-            </div>
-            <div class="project-card__body">
-              <h3 class="project-card__title">Projet à Venir. </h3>
-              <p class="project-card__desc">Détails sur le site.</p>
-              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span
-                  class="tag">Responsive</span></div>
             </div>
           </article>
         </div>
@@ -319,7 +267,7 @@
         <a href="../index.html" class="footer__logo" >
           <img
             src="../images/logos/logo-angelo.jpg"
-            alt="Logo Angelo Koffi" />
+            alt="Logo Angedev.tech" />
         </a>
         <p>Développeur Web en Formation. Passionné, rigoureux et toujours en apprentissage.</p>
         <div class="footer__social">
@@ -342,6 +290,7 @@
           <li><a href="contact.html" >Contact</a></li>
           <li><a href="certification.html" >Certification</a></li>
           <li><a href="parcours.html" >Parcours</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -361,11 +310,10 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2026 Ange_Dev – Développeur Web. Tous droits réservés.</p>
+      <p>© 2026 Angedev.tech – Développeur Web. Tous droits réservés.</p>
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
   <script src="../js/main.js"></script>
   <script src="../js/portfolio.js"></script>
 </body>

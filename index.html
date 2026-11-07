@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Angelo Koffi – Développeur Web en Formation. Interfaces modernes, responsives et performantes." />
-  <title>Ange_Dev</title>
+  <meta name="description" content="Angedev.tech, développeur web front-end en formation : projets, compétences, certificats, services et collaboration." />
+  <title>Angedev.tech | Développeur web</title>
+  <link rel="canonical" href="https://ange-dev-tech.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Angedev.tech | Développeur web" />
+  <meta property="og:description" content="Découvrez les projets, compétences et services d’Angelo Koffi." />
+  <meta property="og:url" content="https://ange-dev-tech.vercel.app/" />
+  <meta property="og:image" content="https://ange-dev-tech.vercel.app/images/portrait-angelo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -19,7 +26,7 @@
       <a href="index.html" class="nav__logo" >
         <img
           src="images/logos/logo-angelo.jpg"
-          alt="Logo Angelo Koffi" />
+          alt="Logo Angedev.tech" />
       </a>
 
       <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu">
@@ -36,6 +43,7 @@
         <li><a href="html/services.html" class="nav__link"  data-page="services">Services</a></li>
         <li><a href="html/portfolio.html" class="nav__link"  data-page="portfolio">Portfolio</a>
         </li>
+        <li><a href="html/blog.html" class="nav__link" data-page="blog">Blog</a></li>
         <li><a href="html/certification.html" class="nav__link"
              data-page="certification">Certification</a></li>
         <li><a href="html/parcours.html" class="nav__link"  data-page="parcours">Parcours</a></li>
@@ -50,65 +58,24 @@
       <div class="container hero__inner">
 
         <div class="hero__content">
-          <span class="hero__badge">Disponible pour des missions freelance &amp; stage</span>
-          <h1 class="hero__name">Angélo <span class="hero__name--accent">Koffi EDEMNAWO</span></h1>
-          <p class="hero__role">
-            <span class="hero__role-text" id="typedRole"></span><span class="hero__cursor">|</span>
-          </p>
+          <h1 class="hero__name">Bonjour,<br />je suis <span class="hero__name--accent">Angedev.tech</span></h1>
+          <p class="hero__role">Développeur web front-end en formation</p>
           <p class="hero__desc">
-            Développeur web front-end en formation, je conçois des interfaces modernes, claires et performantes
-            pour aider les entreprises à renforcer leur présence digitale et leur image de marque.
+            Passionné par la création d’interfaces web modernes et accessibles. Je transforme les idées en expériences
+            numériques claires, utiles et adaptées à tous les écrans.
           </p>
 
           <div class="hero__actions">
-            <a href="html/portfolio.html" class="btn btn--primary" >Voir mes réalisations</a>
-            <a href="html/demander-projet.html" class="btn btn--outline">Demander un projet</a>
+            <a href="html/portfolio.html" class="btn btn--primary"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i> Découvrir mes projets</a>
+            <a href="html/demander-projet.html" class="btn btn--outline">Collaborer avec moi</a>
+            <a href="pdf/cv_koffi_angelo_edemnawo.pdf" class="hero__cv" target="_blank" rel="noopener">Voir mon CV <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
           </div>
 
-          <div class="hero__highlights">
-            <div class="hero__mini-stat">
-              <strong>2+</strong>
-              <span>projets</span>
-            </div>
-            <div class="hero__mini-stat">
-              <strong>100%</strong>
-              <span>responsive</span>
-            </div>
-            <div class="hero__mini-stat">
-              <strong>HTML/CSS</strong>
-              <span>maîtrisés</span>
-            </div>
-          </div>
-
-          <div class="hero__tech">
-            <span class="tech-badge">HTML5</span>
-            <span class="tech-badge">CSS3</span>
-            <span class="tech-badge">Git</span>
-            <span class="tech-badge">JS ↗</span>
-          </div>
         </div>
 
         <div class="hero__visual">
-          <div class="hero__card-glow"></div>
-          <div class="hero__code-card">
-            <div class="code-card__header">
-              <span class="dot dot--red"></span>
-              <span class="dot dot--yellow"></span>
-              <span class="dot dot--green"></span>
-              <span class="code-card__filename">index.html</span>
-            </div>
-            <pre class="code-card__body"><code><span class="c-tag">&lt;section</span> <span class="c-attr">class</span>=<span class="c-str">"hero"</span><span class="c-tag">&gt;</span>
-  <span class="c-tag">&lt;h1&gt;</span><span class="c-text">Angélo Koffi EDEMNAWO</span><span class="c-tag">&lt;/h1&gt;</span>
-  <span class="c-tag">&lt;p&gt;</span><span class="c-text">Développeur Web Front-End</span><span class="c-tag">&lt;/p&gt;</span>
-  <span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-str">"#contact"</span><span class="c-tag">&gt;</span>
-    <span class="c-text">Parler de votre projet</span>
-  <span class="c-tag">&lt;/a&gt;</span>
-<span class="c-tag">&lt;/section&gt;</span></code></pre>
-          </div>
-          <div class="hero__avatar">
-            <img class="hero__avatar__logo"
-              src="images/logos/logo-angelo.jpg"
-              alt="logoange">
+          <div class="hero__portrait">
+            <img src="images/portrait-angelo.jpg" alt="Portrait d’Angelo Koffi" width="1254" height="1254" fetchpriority="high" decoding="async" />
           </div>
         </div>
       </div>
@@ -127,16 +94,28 @@
           <span class="stat-card__label">Projets réalisés</span>
         </div>
         <div class="stat-card">
-          <span class="stat-card__number">100%</span>
-          <span class="stat-card__label">Responsive</span>
+          <span class="stat-card__number">4</span>
+          <span class="stat-card__label">Certificats et attestations</span>
         </div>
         <div class="stat-card">
-          <span class="stat-card__number">✓</span>
-          <span class="stat-card__label">HTML & CSS Maîtrisé</span>
+          <span class="stat-card__number">7</span>
+          <span class="stat-card__label">Technologies et outils documentés</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-card__number">↗</span>
-          <span class="stat-card__label">JavaScript en apprentissage</span>
+      </div>
+    </section>
+
+    <section class="home-about section" aria-labelledby="home-about-title">
+      <div class="container home-about__grid">
+        <div class="home-about__content">
+          <span class="section__eyebrow">À propos de moi</span>
+          <h2 class="section__title" id="home-about-title">Le web comme espace de création et de partage.</h2>
+          <p>Je m’appelle Angélo Koffi EDEMNAWO. En formation en développement web, je construis des interfaces accessibles et responsive tout en approfondissant mes compétences en JavaScript.</p>
+          <ul class="home-about__points">
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Intégration web avec HTML et CSS</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Interfaces pensées pour le mobile</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Apprentissage continu et travail soigné</li>
+          </ul>
+          <a href="html/a-propos.html" class="btn btn--outline">En savoir plus <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -154,7 +133,8 @@
         <div class="home-portfolio__grid">
           <article class="home-project-card home-project-card--featured">
             <div class="home-project-card__media">
-              <img src="images/projet-youthconnect.jpg" alt="Projet Youth Connect" />
+              <img src="images/projet-youthconnect-apercu.png" alt="Page d’accueil du projet YouthConnect" loading="lazy" decoding="async" />
+              <span class="home-project-card__status"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> En ligne</span>
             </div>
             <div class="home-project-card__body">
               <span class="home-project-card__tag">Forum communautaire</span>
@@ -174,12 +154,17 @@
                 <span class="tag">JavaScript</span>
                 <span class="tag">Responsive</span>
               </div>
+              <div class="home-project-card__actions">
+                <a class="btn btn--primary btn--sm" href="https://youth-connect-eight.vercel.app/" target="_blank" rel="noopener noreferrer">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="home-project-card__details" href="html/portfolio.html">Détails</a>
+              </div>
             </div>
           </article>
 
           <article class="home-project-card">
             <div class="home-project-card__media">
-              <img src="images/projet-youthconnect.jpg" alt="Projet portfolio" />
+              <img src="images/logos/logo-angelo.jpg" alt="Logo du portfolio personnel Angedev.tech" loading="lazy" decoding="async" />
+              <span class="home-project-card__status"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> En ligne</span>
             </div>
             <div class="home-project-card__body">
               <span class="home-project-card__tag">Portfolio</span>
@@ -191,6 +176,10 @@
                 <span class="tag">JavaScript</span>
                 <span class="tag">Responsive</span>
               </div>
+              <div class="home-project-card__actions">
+                <a class="btn btn--primary btn--sm" href="html/portfolio.html">Voir le projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="home-project-card__details" href="html/portfolio.html">Détails</a>
+              </div>
             </div>
           </article>
 
@@ -198,98 +187,72 @@
       </div>
     </section>
 
-    <section class="home-overview section" aria-label="Résumé de toutes les sections du portfolio">
+    <section class="home-certificates section" aria-labelledby="home-certificates-title">
       <div class="container">
-        <div class="section__header">
-          <span class="section__eyebrow">Vue d’ensemble</span>
-          <h2 class="section__title">Un parcours clair, du profil à la réalisation</h2>
-          <p class="section__subtitle">Voici un résumé rapide de chaque partie de mon portfolio pour mieux comprendre mon travail et mes compétences.</p>
+        <div class="home-section-heading">
+          <div>
+            <span class="section__eyebrow">Formations vérifiables</span>
+            <h2 class="section__title" id="home-certificates-title">Certificats &amp; attestations</h2>
+          </div>
+          <a href="html/certification.html" class="text-link">Voir tous les certificats <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
-
-        <div class="home-overview__grid">
-          <a class="overview-card" href="html/a-propos.html">
-            <span class="overview-card__number">01</span>
-            <h3>À propos</h3>
-            <p>Une présentation de ma personnalité, de ma passion pour le web et de mon ambition de devenir développeur front-end professionnel.</p>
-          </a>
-
-          <a class="overview-card" href="html/competences.html">
-            <span class="overview-card__number">02</span>
-            <h3>Compétences</h3>
-            <p>Les outils et technologies que je maîtrise déjà ainsi que les domaines dans lesquels je continue à évoluer.</p>
-          </a>
-
-          <a class="overview-card" href="html/services.html">
-            <span class="overview-card__number">03</span>
-            <h3>Services</h3>
-            <p>Des prestations de création de sites vitrines, landing pages, intégration web, optimisation responsive et maintenance.</p>
-          </a>
-
-          <a class="overview-card" href="html/portfolio.html">
-            <span class="overview-card__number">04</span>
-            <h3>Portfolio</h3>
-            <p>Une sélection de réalisations montrant la qualité de mon travail, mon style et les solutions que je peux livrer.</p>
-          </a>
-
-          <a class="overview-card" href="html/certification.html">
-            <span class="overview-card__number">05</span>
-            <h3>Certification</h3>
-            <p>Les preuves de mes compétences et les projets qui valident mon niveau actuel dans le développement web.</p>
-          </a>
-
-          <a class="overview-card" href="html/parcours.html">
-            <span class="overview-card__number">06</span>
-            <h3>Parcours</h3>
-            <p>Mon évolution, mes apprentissages et la progression qui me mène vers un avenir professionnel solide.</p>
-          </a>
-
-          <a class="overview-card overview-card--cta" href="html/contact.html">
-            <span class="overview-card__number">07</span>
-            <h3>Contact</h3>
-            <p>Un espace simple pour discuter d’un projet, d’une mission ou d’une collaboration professionnelle.</p>
-          </a>
+        <div class="home-certificates__grid">
+          <article class="home-certificate">
+            <img src="images/certifications/freecodecamp.png" alt="Certificat freeCodeCamp en conception web responsive" width="640" height="480" loading="lazy" decoding="async" />
+            <div><span>freeCodeCamp</span><h3>Conception web responsive</h3><a href="html/certification.html">Consulter <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+          </article>
+          <article class="home-certificate">
+            <img src="images/certifications/hacking-project.png" alt="Attestation de fin de parcours The Hacking Project" width="640" height="480" loading="lazy" decoding="async" />
+            <div><span>The Hacking Project</span><h3>Attestation de fin de parcours</h3><a href="html/certification.html">Consulter <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+          </article>
+          <article class="home-certificate">
+            <img src="images/certifications/simplilearn-full-stack.png" alt="Certificat Simplilearn Full-Stack Development 101" width="640" height="480" loading="lazy" decoding="async" />
+            <div><span>Simplilearn SkillUp</span><h3>Full-Stack Development 101</h3><a href="html/certification.html">Consulter <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+          </article>
+          <article class="home-certificate">
+            <img src="images/certifications/github-copilot-fundamentals.png" alt="Certificat GitHub Copilot Fundamentals" width="640" height="480" loading="lazy" decoding="async" />
+            <div><span>Simplilearn SkillUp</span><h3>GitHub Copilot Fundamentals</h3><a href="html/certification.html">Consulter <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="home-value section" aria-label="Pourquoi choisir Angelo Koffi">
-      <div class="container home-value__wrap">
-        <div class="home-value__content">
-          <span class="section__eyebrow">Pourquoi me choisir</span>
-          <h2 class="section__title">Un développeur motivé, structuré et orienté résultat</h2>
-          <p>
-            Je m’engage à créer des interfaces nettes, modernes et performantes qui représentent votre activité avec
-            sérieux. Mon approche combine créativité, rigueur et apprentissage continu pour offrir des solutions web
-            utiles, bien pensées et faciles à utiliser.
-          </p>
-          <div class="home-value__list">
-            <div>
-              <strong>01</strong>
-              <span>Conception centrée sur l’utilisateur</span>
-            </div>
-            <div>
-              <strong>02</strong>
-              <span>Design professionnel et responsive</span>
-            </div>
-            <div>
-              <strong>03</strong>
-              <span>Communication claire et livraison fiable</span>
-            </div>
+    <section class="home-services section" aria-labelledby="home-services-title">
+      <div class="container">
+        <div class="home-section-heading">
+          <div>
+            <span class="section__eyebrow">Ce que je peux réaliser</span>
+            <h2 class="section__title" id="home-services-title">Des solutions web adaptées à votre activité.</h2>
           </div>
-          <a href="html/contact.html" class="btn btn--primary" >Discutons de votre projet</a>
+          <a href="html/services.html" class="text-link">Découvrir mes services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
+        <div class="home-services__grid">
+          <article class="home-service-card"><span class="home-service-card__icon"><i class="fa-solid fa-window-maximize" aria-hidden="true"></i></span><h3>Sites vitrines</h3><p>Présentez votre activité avec un site clair, responsive et fidèle à votre identité.</p><a href="html/demander-projet.html">Parler de mon projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></article>
+          <article class="home-service-card"><span class="home-service-card__icon"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></span><h3>Landing pages</h3><p>Une page ciblée pour mettre en avant une offre, un service ou un événement.</p><a href="html/demander-projet.html">Parler de mon projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></article>
+          <article class="home-service-card"><span class="home-service-card__icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span><h3>Intégration web</h3><p>Des interfaces intégrées en HTML, CSS et JavaScript, avec attention au rendu mobile.</p><a href="html/demander-projet.html">Parler de mon projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></article>
+        </div>
+      </div>
+    </section>
 
-        <div class="home-value__panel">
-          <div class="home-value__panel-card">
-            <span class="panel-label">Approche</span>
-            <h3>Créer une présence digitale crédible</h3>
-            <ul>
-              <li>Sites vitrines élégants</li>
-              <li>Landing pages performantes</li>
-              <li>Interfaces modernes et lisibles</li>
-              <li>Expérience mobile optimisée</li>
-            </ul>
-          </div>
+    <section class="home-blog section" aria-labelledby="home-blog-title">
+      <div class="container home-blog__inner">
+        <span class="home-blog__icon"><i class="fa-regular fa-pen-to-square" aria-hidden="true"></i></span>
+        <div><span class="section__eyebrow">Blog &amp; actualités</span><h2 id="home-blog-title">Des retours d’expérience bientôt.</h2><p>Je publierai ici des articles fondés sur mes projets et mes apprentissages réels.</p></div>
+        <a href="html/blog.html" class="btn btn--outline">Visiter le blog <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <section class="home-collaboration section" id="home-collaboration" aria-labelledby="home-collaboration-title">
+      <div class="container home-collaboration__inner">
+        <div class="home-collaboration__icon" aria-hidden="true"><i class="fa-regular fa-paper-plane"></i></div>
+        <div class="home-collaboration__copy">
+          <span class="section__eyebrow">Collaboration</span>
+          <h2 id="home-collaboration-title">Travaillons ensemble !</h2>
+          <p>Vous avez un projet, une idée ou un besoin web ? Parlons-en et voyons comment lui donner vie.</p>
+        </div>
+        <div class="home-collaboration__actions">
+          <a href="html/demander-projet.html" class="btn btn--primary">Présenter mon projet <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="html/contact.html" class="home-collaboration__contact">Ou m’écrire directement</a>
         </div>
       </div>
     </section>
@@ -302,7 +265,7 @@
         <a href="index.html" class="footer__logo" >
           <img
             src="images/logos/logo-angelo.jpg"
-            alt="Logo Angelo Koffi" />
+            alt="Logo Angedev.tech" />
         </a>
         <p>Développeur Web en Formation. Passionné, rigoureux et toujours en apprentissage.</p>
         <div class="footer__social">
@@ -325,6 +288,7 @@
           <li><a href="html/contact.html" >Contact</a></li>
           <li><a href="html/certification.html" >Certification</a></li>
           <li><a href="html/parcours.html" >Parcours</a></li>
+          <li><a href="html/confidentialite.html">Confidentialité</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -344,11 +308,10 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2026 Ange_Dev – Développeur Web. Tous droits réservés.</p>
+      <p>© 2026 Angedev.tech – Développeur Web. Tous droits réservés.</p>
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
   <script src="js/main.js"></script>
   <script src="js/accueil.js"></script>
 </body>

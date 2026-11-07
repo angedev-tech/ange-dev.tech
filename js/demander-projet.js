@@ -67,7 +67,7 @@
     e.preventDefault();
     if (step < 3) { if (valid()) go(step + 1); return; }
     const file = fileInput.files[0];
-    const d = { type: val('type_solution'), modules: modules(), delai: val('delai'), nom: val('nom'), entreprise: val('entreprise'),
+    const d = { type: val('type_solution'), modules: modules(), delai: val('delai'), nom: val('nom'), entreprise: val('entreprise'), budget: val('budget'),
                 whatsapp: val('indicatif') + ' ' + val('whatsapp'), description: val('description') };
     const fd = new FormData(form);
     fd.delete('modules'); fd.delete('indicatif');
@@ -88,6 +88,7 @@
       if (!res.ok) throw new Error(res.status);
       done(d, file, sansPdf);
     } catch (err) {
+      console.error('Échec de transmission de la demande via Formspree.', err);
       show('Envoi impossible pour le moment. Réessayez dans un instant ou écrivez-nous directement sur WhatsApp.');
     } finally {
       send.disabled = false; send.innerHTML = label;
@@ -95,10 +96,10 @@
   });
 
   function done(d, file, sansPdf) {
-    const txt = `Bonjour, je viens d’envoyer une demande de projet depuis votre site.\n\n• Solution : ${d.type}\n• Modules : ${d.modules.join(', ')}\n• Délai : ${d.delai}\n• Nom : ${d.nom}${d.entreprise ? ' (' + d.entreprise + ')' : ''}\n\n${d.description.slice(0, 600)}`
+    const txt = `Bonjour, je viens d’envoyer une demande de projet depuis votre site.\n\n• Solution : ${d.type}\n• Modules : ${d.modules.join(', ')}\n• Délai : ${d.delai}\n• Nom : ${d.nom}${d.entreprise ? ' (' + d.entreprise + ')' : ''}${d.budget ? '\n• Budget indicatif : ' + d.budget : ''}\n\n${d.description.slice(0, 600)}`
       + (file ? '\n\n(Je vous envoie mon cahier des charges PDF ici.)' : '');
     $('dpWa').href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`;
-    $('dpDoneText').textContent = 'Merci ! Votre demande est bien arrivée. Nous vous contactons sur WhatsApp sous 24h.'
+    $('dpDoneText').textContent = 'Merci ! Votre demande a bien été transmise au service Formspree.'
       + (sansPdf ? ' Votre PDF n’a pas pu être joint automatiquement : envoyez-le-nous directement sur WhatsApp.' : '');
     form.hidden = true; $('dpDone').hidden = false;
     bars.forEach((b) => { b.classList.add('is-done'); b.classList.remove('is-current'); });

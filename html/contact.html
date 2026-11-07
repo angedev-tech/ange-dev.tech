@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Angelo Koffi – Développeur Web en Formation. Interfaces modernes, responsives et performantes." />
-  <title>Ange_Dev | Contact</title>
+  <meta name="description" content="Contacter Angelo Koffi pour discuter d’un projet web, d’une mission ou d’une collaboration." />
+  <title>Contact | Angedev.tech</title>
+  <link rel="canonical" href="https://ange-dev-tech.vercel.app/html/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Contact | Angedev.tech" />
+  <meta property="og:description" content="Échangeons sur votre projet web ou une collaboration." />
+  <meta property="og:url" content="https://ange-dev-tech.vercel.app/html/contact.html" />
+  <meta property="og:image" content="https://ange-dev-tech.vercel.app/images/portrait-angelo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -19,7 +26,7 @@
       <a href="../index.html" class="nav__logo" >
         <img
           src="../images/logos/logo-angelo.jpg"
-          alt="Logo Angelo Koffi" />
+          alt="Logo Angedev.tech" />
       </a>
 
       <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu">
@@ -36,6 +43,7 @@
         <li><a href="services.html" class="nav__link"  data-page="services">Services</a></li>
         <li><a href="portfolio.html" class="nav__link"  data-page="portfolio">Portfolio</a>
         </li>
+        <li><a href="blog.html" class="nav__link" data-page="blog">Blog</a></li>
         <li><a href="certification.html" class="nav__link"
              data-page="certification">Certification</a></li>
         <li><a href="parcours.html" class="nav__link"  data-page="parcours">Parcours</a></li>
@@ -97,6 +105,11 @@
                 <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet..."
                   required></textarea>
               </div>
+              <label class="form__consent">
+                <input type="checkbox" name="confidentialite_lue" value="oui" required />
+                <span>J’ai pris connaissance de la <a href="confidentialite.html" target="_blank" rel="noopener noreferrer">politique de confidentialité provisoire</a>.</span>
+              </label>
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="form__honeypot" aria-hidden="true" />
               <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="22" y1="2" x2="11" y2="13" />
@@ -104,8 +117,8 @@
                 </svg>
                 Envoyer le message
               </button>
-              <p class="form__success" id="formSuccess">✅ Message envoyé ! Je vous répondrai bientôt.</p>
-              <p class="form__error" id="formError">❌ Une erreur s'est produite. Réessayez ou contactez-moi par email.
+              <p class="form__success" id="formSuccess" role="status" aria-live="polite">Message transmis. Je vous répondrai dès que possible.</p>
+              <p class="form__error" id="formError" role="alert">L’envoi a échoué. Réessayez ou contactez-moi par email.
               </p>
             </form>
           </div>
@@ -120,7 +133,7 @@
         <a href="../index.html" class="footer__logo" >
           <img
             src="../images/logos/logo-angelo.jpg"
-            alt="Logo Angelo Koffi" />
+            alt="Logo Angedev.tech" />
         </a>
         <p>Développeur Web en Formation. Passionné, rigoureux et toujours en apprentissage.</p>
         <div class="footer__social">
@@ -143,6 +156,7 @@
           <li><a href="contact.html" >Contact</a></li>
           <li><a href="certification.html" >Certification</a></li>
           <li><a href="parcours.html" >Parcours</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -162,11 +176,10 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2026 Ange_Dev – Développeur Web. Tous droits réservés.</p>
+      <p>© 2026 Angedev.tech – Développeur Web. Tous droits réservés.</p>
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
   <script src="../js/main.js"></script>
   <script src="../js/contact.js"></script>
 </body>

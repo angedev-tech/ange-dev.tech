@@ -1,31 +1,5 @@
-// 5. TYPED ROLE TEXT
-// ============================================================
-const roles = ['Développeur Web en Formation', 'Intégrateur HTML/CSS', "Créateur d'interfaces modernes"];
-let ri = 0, ci = 0, isDeleting = false;
-const typed = document.getElementById('typedRole');
-
-function typeEffect() {
-  if (!typed) return;
-  const current = roles[ri];
-  if (isDeleting) {
-    typed.textContent = current.substring(0, ci--);
-  } else {
-    typed.textContent = current.substring(0, ci++);
-  }
-  let delay = isDeleting ? 50 : 100;
-  if (!isDeleting && ci === current.length + 1) {
-    delay = 1800; isDeleting = true;
-  } else if (isDeleting && ci === 0) {
-    isDeleting = false; ri = (ri + 1) % roles.length; delay = 300;
-  }
-  setTimeout(typeEffect, delay);
-}
-typeEffect();
-
-// ============================================================
-
 /* ==========================================================
-   CARROUSEL INFINI – technologies maîtrisées
+   CARROUSEL INFINI – technologies et outils du parcours
    À charger APRÈS main.js
    Pour ajouter une technologie : une ligne dans TECHNOLOGIES.
    ========================================================== */
@@ -56,9 +30,9 @@ typeEffect();
 
   const section = document.createElement('section');
   section.className = 'tech-marquee';
-  section.setAttribute('aria-label', 'Technologies que je maîtrise');
+  section.setAttribute('aria-label', 'Technologies et outils présents dans le parcours');
   section.innerHTML =
-    '<div class="container"><h2 class="tech-marquee__title">Les technologies que je maîtrise</h2></div>' +
+    '<div class="container"><h2 class="tech-marquee__title">Technologies et outils présents dans mon parcours</h2></div>' +
     '<div class="marquee"><div class="marquee__track">' +
     // Chaque groupe répète la liste, et le 2e groupe est un clone : boucle sans coupure
     `<ul class="marquee__group">${real}${copies}</ul>` +

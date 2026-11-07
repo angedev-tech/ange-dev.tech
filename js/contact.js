@@ -22,9 +22,11 @@ if (contactForm) {
         if (formSuccess) formSuccess.style.display = 'block';
         contactForm.reset();
       } else {
+        console.error(`Échec Formspree pour le formulaire de contact (HTTP ${response.status}).`);
         if (formError) formError.style.display = 'block';
       }
-    } catch {
+    } catch (error) {
+      console.error('Échec réseau pour le formulaire de contact.', error);
       if (formError) formError.style.display = 'block';
     }
 

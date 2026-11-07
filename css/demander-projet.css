@@ -240,9 +240,9 @@
     gap: 1rem;
     margin-top: var(--space-md);
     padding: 1.1rem 1.3rem;
-    color: #065f46;
-    background: #ecfdf5;
-    border: 1px solid #a7f3d0;
+    color: var(--color-success-text);
+    background: var(--color-success-bg);
+    border: 1px solid var(--color-success-border);
     border-radius: 22px;
 }
 
@@ -343,7 +343,7 @@
 .dp__tag {
     font-size: 0.75rem;
     font-weight: 700;
-    color: #16a34a;
+    color: var(--color-success-text);
 }
 
 .dp__mono {
@@ -405,6 +405,29 @@
     color: #b91c1c;
     background: #fef2f2;
     border-radius: 14px;
+}
+
+.dp__consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text);
+    font-size: 0.86rem;
+}
+
+.dp__consent input {
+    flex: none;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.25rem;
+    accent-color: var(--color-primary);
+}
+
+.dp__consent a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
 }
 
 .dp__nav {
@@ -539,4 +562,73 @@
     .dp__steps li::after {
         transition: none;
     }
+}
+
+.dp__btn--next {
+    color: #fff;
+    background: var(--grad-primary);
+    border-color: rgba(255, 255, 255, 0.24);
+    box-shadow: 0 8px 22px rgba(37, 99, 235, 0.24);
+}
+
+.dp__btn--next:hover:not(:disabled) {
+    color: #fff;
+    background: linear-gradient(135deg, var(--color-primary-dark), #5b21b6);
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.3);
+}
+
+.dp__btn--next:disabled {
+    color: #fff;
+    background: #64748b;
+    border-color: #64748b;
+    opacity: 1;
+}
+
+.dp__btn--next:focus-visible,
+.dp__btn--ghost:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+:root:not([data-theme="light"]) .dp {
+    --dp-ink: var(--color-heading);
+    --dp-soft: #172338;
+    --dp-line: #334155;
+}
+
+:root:not([data-theme="light"]) .dp__opt:has(input:checked),
+:root:not([data-theme="light"]) .dp__chk:has(input:checked) {
+    background: color-mix(in srgb, var(--dp-accent) 18%, var(--color-surface));
+}
+
+:root:not([data-theme="light"]) .dp__ico,
+:root:not([data-theme="light"]) .dp__chk input {
+    color: var(--color-heading);
+    background: #0f172a;
+}
+
+:root:not([data-theme="light"]) .dp__f input:not([type="file"]):focus,
+:root:not([data-theme="light"]) .dp__f select:focus,
+:root:not([data-theme="light"]) .dp__f textarea:focus {
+    color: var(--color-heading);
+    background: #0f172a;
+}
+
+:root:not([data-theme="light"]) .dp__drop {
+    border-color: var(--dp-line);
+}
+
+:root:not([data-theme="light"]) .dp__drop:hover,
+:root:not([data-theme="light"]) .dp__drop.is-over {
+    background: color-mix(in srgb, var(--dp-accent) 14%, var(--color-surface));
+}
+
+:root:not([data-theme="light"]) .dp__btn--ghost {
+    color: var(--color-heading);
+    background: var(--color-surface);
+    border-color: var(--dp-line);
+}
+
+:root:not([data-theme="light"]) .dp__btn--ghost:hover {
+    border-color: var(--color-heading);
 }
