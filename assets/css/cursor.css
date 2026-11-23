@@ -1,0 +1,128 @@
+html.cursor-hyper-ripple-enabled,
+html.cursor-hyper-ripple-enabled body,
+html.cursor-hyper-ripple-enabled body * {
+  cursor: none !important;
+}
+
+html.cursor-hyper-ripple-enabled input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+html.cursor-hyper-ripple-enabled textarea {
+  cursor: text !important;
+}
+
+html.cursor-hyper-ripple-enabled select,
+html.cursor-hyper-ripple-enabled input[type="button"],
+html.cursor-hyper-ripple-enabled input[type="submit"],
+html.cursor-hyper-ripple-enabled input[type="reset"],
+html.cursor-hyper-ripple-enabled input[type="checkbox"],
+html.cursor-hyper-ripple-enabled input[type="radio"],
+html.cursor-hyper-ripple-enabled input[type="file"] {
+  cursor: auto !important;
+}
+
+html.cursor-hyper-ripple-enabled [contenteditable],
+html.cursor-hyper-ripple-enabled [contenteditable] * {
+  cursor: text !important;
+}
+
+.cursor-hyper-ripple {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.cursor-hyper-ripple.is-visible {
+  opacity: 1;
+}
+
+.cursor-hyper-ripple.is-hidden {
+  opacity: 0;
+}
+
+.cursor-hyper-ripple__core,
+.cursor-hyper-ripple__trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.cursor-hyper-ripple__core {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle at 64% 64%, #ffb36b 0 13%, #e8ffff 24%, #64f5ff 54%, #319aff 100%);
+  box-shadow: 0 0 8px 3px rgba(80, 238, 255, 0.9), 0 0 22px 8px rgba(41, 143, 255, 0.62);
+}
+
+.cursor-hyper-ripple.is-visible:not(.is-hidden) .cursor-hyper-ripple__core {
+  animation: hyperRipplePulse 2.2s ease-in-out infinite;
+}
+
+.cursor-hyper-ripple__core.is-clicking {
+  animation: hyperRippleClick 360ms ease-out;
+}
+
+.cursor-hyper-ripple__trail {
+  width: var(--trail-size);
+  height: var(--trail-size);
+  opacity: var(--trail-opacity);
+  background: radial-gradient(circle, rgba(97, 238, 255, 0.55), rgba(38, 133, 255, 0.2) 48%, transparent 72%);
+  filter: blur(3px);
+}
+
+.cursor-hyper-ripple__ring {
+  position: fixed;
+  z-index: 9998;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid rgba(109, 245, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(63, 206, 255, 0.75), inset 0 0 8px rgba(91, 222, 255, 0.35);
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.25);
+  animation: hyperRippleExpand 720ms cubic-bezier(0.12, 0.68, 0.25, 1) forwards;
+}
+
+@keyframes hyperRipplePulse {
+  50% {
+    box-shadow: 0 0 11px 4px rgba(80, 238, 255, 1), 0 0 27px 10px rgba(41, 143, 255, 0.72);
+  }
+}
+
+@keyframes hyperRippleClick {
+  45% {
+    transform: translate3d(var(--cursor-x), var(--cursor-y), 0) translate(-50%, -50%) scale(0.55);
+  }
+}
+
+@keyframes hyperRippleExpand {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(5.2);
+  }
+}
+
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  html.cursor-hyper-ripple-enabled,
+  html.cursor-hyper-ripple-enabled body,
+  html.cursor-hyper-ripple-enabled body * {
+    cursor: auto !important;
+  }
+
+  html.cursor-hyper-ripple-enabled input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+  html.cursor-hyper-ripple-enabled textarea,
+  html.cursor-hyper-ripple-enabled [contenteditable],
+  html.cursor-hyper-ripple-enabled [contenteditable] * {
+    cursor: text !important;
+  }
+
+  .cursor-hyper-ripple,
+  .cursor-hyper-ripple__ring {
+    display: none !important;
+  }
+}
